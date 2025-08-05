@@ -59,11 +59,11 @@ const services = [
 		number: 5,
 		title: (
 			<>
-				Custom <em>IP Solutions</em>
+				Custom <em>Solutions</em>
 			</>
 		),
 		description:
-			'Have a unique workflow or firm-specific requirement? We seamlessly integrate into your team’s processes, delivering accurate, on-time IP support that meets your client’s expectations and yours.',
+			'Have a unique workflow or firm-specific requirement? We seamlessly integrate into your team’s processes, delivering accurate, on-time support that meets your client’s expectations and yours.',
 		image: customWorkflowImage,
 		alt: 'Custom Workflow',
 	},

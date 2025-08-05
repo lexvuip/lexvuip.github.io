@@ -111,13 +111,26 @@
 	min-width: 200px;
 }
 
-.our-service-image {
+/* .our-service-image {
 	width: 400px;
 	height: 500px;
 	object-fit: cover;
 	border-radius: 2px;
 	background: var(--color-white);
+} */
+
+.our-service-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 4 / 5; /* Maintains 400x500 aspect ratio */
+  object-fit: cover;
+  border-radius: 2px;
+  background: var(--color-white);
+  display: block;
+  margin: 0 auto; /* Optional: centers image horizontally */
 }
+
 
 .our-learnmore-row {
 	width: 100%;
@@ -143,4 +156,17 @@
 .our-learnmore-btn:hover {
 	background: var(--color-link);
 	color: var(--color-maroon);
+}
+
+
+@media (max-width: 768px) {
+  .our-service-image {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .our-service-image {
+    max-width: 400px;
+  }
 }

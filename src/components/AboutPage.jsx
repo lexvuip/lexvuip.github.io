@@ -4,8 +4,11 @@ import lawyerImage from '../assets/stockimages/lawer.jpg';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
 import FotterSection from './FotterSection';
+import { useNavigate } from 'react-router-dom';
 
 function AboutPage() {
+
+    let navigate = useNavigate();
     return (
         <div>
         <section className="about-page-section">
@@ -14,7 +17,7 @@ function AboutPage() {
                 <p className="about-page-description">
                     For over 25 years, LexVuIP has empowered intellectual property attorneys with expert patent illustration and IP documentation services—enabling seamless filings, confident prosecution, and bulletproof compliance with global patent offices. From complex utility patents to intricate design and trademark filings, we help legal professionals worldwide present innovation with unmatched accuracy and clarity.
                 </p>
-                <button className="about-page-btn">Talk to our Experts →</button>
+                <button className="about-page-btn" onClick={() => navigate('/contact')}>Talk to our Experts →</button>
             </div>
             <div className="about-page-image-container">
                 <img src={lawyerImage} alt="Lawyer" className="about-page-image" />
@@ -46,7 +49,7 @@ function AboutPage() {
                 <p className="our-journey-description">
                     Trusted across the USPTO, EPO, EUIPO, and Indian Patent Office, our journey has always been rooted in one mission: to help legal professionals protect innovation with absolute confidence and accuracy.
                 </p>
-                <button className="our-journey-btn">Talk to our Experts →</button>
+                <button className="our-journey-btn" onClick={() => navigate('/contact')}>Talk to our Experts →</button>
             </div>
         </section>
         <TestimonialSection />

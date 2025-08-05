@@ -15,12 +15,12 @@ const faqs = [
 	{
 		question: 'How long does it take to complete a drawing?',
 		answer:
-			'Most projects are delivered within 2–4 business days, depending on the complexity. We also offer express service for urgent requests.',
+			'Most projects are delivered within 2–4 business days, depending on the complexity. If you’re on a tight deadline, we also offer an express service at no additional cost.',
 	},
 	{
 		question: 'What file formats do you accept and deliver?',
 		answer:
-			'We accept sketches, hand-drawn scans, CAD, PPT, or even rough diagrams. Final files are delivered in PDF, TIFF, and DOC formats — ready for direct patent office submission.',
+			'We accept sketches, hand-drawn scans, CAD, PPT, or even rough diagrams. Final files are delivered in PDF or JPEG, formats ready for direct patent office submission.',
 	},
 	{
 		question: 'Do you sign NDAs or keep client data confidential?',
