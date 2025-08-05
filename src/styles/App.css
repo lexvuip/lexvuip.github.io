@@ -1,0 +1,102 @@
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Hero Section styles */
+.hero-section {
+	width: 100%;
+	background-image: url('https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 0 0 0 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+}
+
+.hero-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: 80%;
+	margin: auto auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.hero-title {
+	font-family: var(--font-serif);
+	font-size: 5.81rem;
+	font-weight: bold;
+	color: var(--color-white);
+	margin-bottom: 2.5rem;
+	margin-top: 4vw;
+	line-height: 1.1;
+	text-align: left;
+}
+
+.hero-description {
+	font-family: var(--font-serif);
+	font-size: 1.25rem;
+	color: var(--color-white);
+	margin-bottom: 4rem;
+	max-width: 900px;
+	text-align: left;
+	line-height: 1.2;
+}
+
+.hero-actions {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.hero-contact-btn {
+	background: var(--color-light-pink);
+	color: var(--color-maroon);
+	font-size: 1.25rem;
+	font-family: var(--font-serif);
+	border: none;
+	border-radius: 2px;
+	padding: 1rem 3.5rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	box-shadow: none;
+}
+
+.hero-contact-btn:hover {
+	background: var(--color-link);
+	color: var(--color-maroon);
+}
+
+.hero-services-link {
+	color: var(--color-white);
+	font-family: var(--font-serif);
+	font-size: 1.25rem;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: auto;
+	transition: color 0.2s;
+}
+
+.hero-services-link:hover {
+	color: var(--color-maroon);
+}

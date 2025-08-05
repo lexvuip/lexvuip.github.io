@@ -1,0 +1,146 @@
+@import './variables.css';
+
+.our-section {
+	width: 100%;
+	background: var(--color-maroon);
+	min-height: 100vh;
+	padding: 0 0 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.our-container {
+	width: 100%;
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 3vw 0 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.our-label {
+	font-family: var(--font-serif);
+	font-size: 1rem;
+	color: var(--color-white);
+	margin-bottom: 1.5rem;
+	margin-top: 0.5rem;
+	text-align: center;
+}
+
+.our-title {
+	font-family: var(--font-serif);
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: var(--color-white);
+	margin-bottom: 4vw;
+	margin-top: 0;
+	text-align: center;
+	line-height: 1.15;
+	max-width: 900px;
+}
+
+.our-services-list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 4vw;
+	margin-bottom: 4vw;
+}
+
+.our-service-card {
+	width: 100%;
+	min-height: 320px;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.07);
+	border-radius: 0;
+	padding: 2vw 2vw 2vw 0;
+	box-sizing: border-box;
+	position: relative;
+	gap: 2vw;
+}
+
+.our-service-number {
+	font-family: var(--font-serif);
+	font-size: 10rem;
+	font-weight: regular;
+	color: var(--color-white);
+	margin-right: 2vw;
+	margin-left: 2vw;
+	line-height: 1;
+}
+
+.our-service-content {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: var(--color-white);
+	min-width: 0;
+}
+
+.our-service-title {
+	font-family: var(--font-serif);
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: var(--color-white);
+	margin-bottom: 1rem;
+}
+
+.our-service-title em {
+	font-style: italic;
+	font-weight: 400;
+}
+
+.our-service-description {
+	font-family: var(--font-serif);
+	font-size: 1rem;
+	color: var(--color-link);
+	margin-bottom: 0;
+	max-width: 700px;
+}
+
+.our-service-image-wrapper {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	min-width: 200px;
+}
+
+.our-service-image {
+	width: 400px;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 2px;
+	background: var(--color-white);
+}
+
+.our-learnmore-row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 3vw;
+}
+
+.our-learnmore-btn {
+	background: var(--color-light-pink);
+	color: var(--color-maroon);
+	font-size: 1rem;
+	font-family: var(--font-serif);
+	border: none;
+	border-radius: 2px;
+	padding: 0.8rem 2.5rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	box-shadow: none;
+}
+
+.our-learnmore-btn:hover {
+	background: var(--color-link);
+	color: var(--color-maroon);
+}

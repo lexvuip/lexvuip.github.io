@@ -1,0 +1,244 @@
+.about-page-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+    background-color: var(--color-bg-light);
+    min-height: 100vh;
+}
+
+.our-journey-section {
+    display: flex;
+    padding: 8%;
+    background-color: var(--color-bg-light);
+    text-align: left;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.our-journey-left-column {
+    flex: 1;
+    /* max-width: 200px; */
+}
+
+.our-journey-right-column {
+    flex: 1;
+    /* max-width: 700px; */
+}
+
+.our-journey-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.our-journey-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.our-journey-arrow-container {
+    display: flex;
+    gap: 2px;
+}
+
+.our-journey-arrow {
+    width: 15px;
+    height: 3px;
+    background-color: var(--color-maroon);
+    transform: skewX(-30deg);
+}
+
+.our-journey-arrow:nth-child(2) {
+    width: 12px;
+    opacity: 0.8;
+}
+
+.our-journey-arrow:nth-child(3) {
+    width: 9px;
+    opacity: 0.6;
+}
+
+.our-journey-title-small {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-maroon);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.our-journey-title-large {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    color: var(--color-heading);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.our-journey-emphasis {
+    font-style: italic;
+}
+
+.our-journey-description {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.our-journey-btn {
+    background-color: var(--color-maroon);
+    color: var(--color-white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.our-journey-btn:hover {
+    background-color: var(--color-maroon-dark);
+}
+
+@media (max-width: 768px) {
+    .our-journey-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .our-journey-left-column,
+    .our-journey-right-column {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .our-journey-header {
+        justify-content: center;
+    }
+
+    .our-journey-btn {
+        align-self: center;
+    }
+
+    .our-journey-title-large {
+        font-size: 2rem;
+    }
+
+    .our-journey-description {
+        font-size: 0.9rem;
+    }
+
+    .our-journey-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+.about-page-content {
+    flex: 1;
+}
+
+.about-page-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--color-maroon);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-page-emphasis {
+    font-style: italic;
+    color: var(--color-maroon);
+}
+
+.about-page-description {
+    font-size: 1.1rem;
+    color: var(--color-muted-text);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.about-page-btn {
+    background-color: var(--color-maroon);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-page-btn:hover {
+    background-color: var(--color-maroon-dark);
+}
+
+.about-page-image-container {
+    flex: 0.7;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-left: 20px;
+    /* background-color: aqua; */
+}
+
+.about-page-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
+    .about-page-section {
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .about-page-title {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+    .about-page-description {
+        text-align: center;
+    }
+
+    .about-page-btn {
+        margin: 0 auto;
+    }
+
+    .about-page-image-container {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page-title {
+        font-size: 2.2rem;
+    }
+
+    .about-page-description {
+        font-size: 1rem;
+    }
+
+    .about-page-btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
