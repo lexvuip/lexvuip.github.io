@@ -114,10 +114,6 @@ function ContactUs() {
 						<h3>Email</h3>
 						<a href="mailto:inbox.lexvuip@gmail.com?subject=New Inquiry" className='contact_link'>inbox.lexvuip@gmail.com</a >
 					</div>
-					<div className="info-item">
-						<h3>Office Hours</h3>
-						<p>Available Soon</p>
-					</div>
 				</div>
 			<FooterSection />
 		</section>

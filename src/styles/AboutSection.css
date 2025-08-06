@@ -136,3 +136,128 @@
 	margin-bottom: 0.5rem;
 	margin-top: 1rem;
 }
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+	.about-section {
+		padding: 0;
+		margin: 0;
+	}
+
+	.about-container {
+		padding: 0;
+		max-width: 100%;
+	}
+
+	.about-content {
+		padding: 2rem 1.5rem;
+		border-left: 1px solid var(--color-pink-divider);
+		border-right: 1px solid var(--color-pink-divider);
+	}
+
+	.about-label {
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+		color: var(--color-maroon);
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+	}
+
+	.about-label::before {
+		content: '';
+		display: inline-block;
+		width: 1.5rem;
+		height: 0.5rem;
+		background: var(--color-maroon);
+		margin-right: 0.5rem;
+		border-radius: 1px;
+	}
+
+	.about-title {
+		font-size: 1.8rem;
+		line-height: 1.2;
+		margin-bottom: 1.2rem;
+	}
+
+	.about-description {
+		font-size: 1rem;
+		line-height: 1.4;
+	}
+
+	.about-actions {
+		justify-content: flex-start;
+		margin-top: 1rem;
+	}
+
+	.about-contact-btn {
+		background: var(--color-maroon);
+		color: white;
+		padding: 0.8rem 1.5rem;
+		font-size: 0.9rem;
+	}
+
+	.about-image-row {
+		padding: 0;
+	}
+
+	.about-image {
+		max-width: 100%;
+		margin: 0;
+		border-radius: 0;
+	}
+
+	.about-stats-row {
+		flex-direction: column;
+		max-width: 100%;
+		margin: 0;
+		gap: 0;
+	}
+
+	.about-stat {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem;
+		border-left: 1px solid var(--color-pink-divider);
+		border-right: 1px solid var(--color-pink-divider);
+		text-align: left;
+	}
+
+	.about-stat-value {
+		font-size: 2.5rem;
+		margin: 0;
+		color: var(--color-maroon);
+	}
+
+	.about-stat-label {
+		font-size: 0.9rem;
+		margin: 0;
+		max-width: 60%;
+		line-height: 1.3;
+	}
+
+	.about-divider {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.about-title {
+		font-size: 1.5rem;
+	}
+
+	.about-description {
+		font-size: 0.9rem;
+	}
+
+	.about-stat-value {
+		font-size: 2rem;
+	}
+
+	.about-stat-label {
+		font-size: 0.8rem;
+	}
+}

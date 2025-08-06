@@ -97,7 +97,7 @@
 
 .our-service-description {
 	font-family: var(--font-serif);
-	font-size: 1rem;
+	font-size: 1.20rem;
 	color: var(--color-link);
 	margin-bottom: 0;
 	max-width: 700px;
@@ -110,14 +110,6 @@
 	align-items: center;
 	min-width: 200px;
 }
-
-/* .our-service-image {
-	width: 400px;
-	height: 500px;
-	object-fit: cover;
-	border-radius: 2px;
-	background: var(--color-white);
-} */
 
 .our-service-image {
   width: 100%;
@@ -160,6 +152,89 @@
 
 
 @media (max-width: 768px) {
+  .our-container {
+    max-width: 100%;
+    padding: 2rem 0 0 0;
+  }
+  
+  .our-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+  .our-label::before,
+  .our-label::after {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 0.5rem;
+    background: var(--color-light-pink);
+    margin: 0 0.5rem;
+  }
+  
+  .our-title {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+  }
+  
+  .our-services-list {
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .our-service-card {
+    flex-direction: column;
+    min-height: auto;
+    padding: 0;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 0;
+  }
+  
+  .our-service-number {
+    font-size: 3rem;
+    margin: 1rem 0 0 1.5rem;
+    align-self: flex-start;
+  }
+  
+  .our-service-content {
+    padding: 1rem 1.5rem 2rem;
+    width: 100%;
+  }
+  
+  .our-service-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .our-service-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* Hide images on mobile as shown in the image */
+  .our-service-image-wrapper {
+    display: none;
+  }
+  
+  .our-learnmore-row {
+    margin: 2rem 0;
+  }
+  
+  .our-learnmore-btn {
+    width: 80%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
   .our-service-image {
     max-width: 90%;
   }
@@ -168,5 +243,19 @@
 @media (min-width: 1200px) {
   .our-service-image {
     max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-title {
+    font-size: 1.5rem;
+  }
+  
+  .our-service-title {
+    font-size: 1.5rem;
+  }
+  
+  .our-service-description {
+    font-size: 0.85rem;
   }
 }
