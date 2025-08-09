@@ -86,7 +86,7 @@ function AboutSection() {
 				</div>
 				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
 					<div className="about-stat-value">
-						{startCount && <CountUp end={40} duration={2.5} suffix="+" />}
+						{startCount && <CountUp end={46} duration={2.5} suffix="+" />}
 					</div>
 					<div className="about-stat-label">
 						Technical Fields & Sectors Covered
@@ -96,7 +96,7 @@ function AboutSection() {
 				
 				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
 					<div className="about-stat-value">
-						{startCount && <CountUp end={98} duration={2.5} suffix="%" />}
+						{startCount && <CountUp end={98} duration={2.0} suffix="%" />}
 					</div>
 					<div className="about-stat-label">Client Satisfaction Worldwide</div>
 				</div>
@@ -105,7 +105,7 @@ function AboutSection() {
 				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
 					<div className="about-stat-value">
 						{startCount && (
-							<CountUp end={1000} duration={3} separator="," suffix="+" />
+							<CountUp end={45657} duration={1.5} separator="," suffix="+" />
 						)}
 					</div>
 					<div className="about-stat-label">

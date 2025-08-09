@@ -127,6 +127,15 @@
 	font-weight: bold;
 	color: var(--color-maroon);
 	margin-bottom: 0.5rem;
+	transition: transform 0.5s ease, opacity 0.5s ease;
+	transform: scale(0.95);
+	opacity: 0;
+}
+
+.about-stat.revealed .about-stat-value {
+	transform: scale(1);
+	opacity: 1;
+
 }
 
 .about-stat-label {
