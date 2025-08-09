@@ -21,6 +21,55 @@ function AboutSection() {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [startCount]);
+
+	useEffect(() => {
+		const container = document.querySelector('.about-image-row');
+		const image = document.querySelector('.about-image');
+		if (!container || !image) return;
+
+		const prefersReduced = window.matchMedia(
+			'(prefers-reduced-motion: reduce)'
+		).matches;
+		if (prefersReduced) return;
+
+		let rafId = null;
+
+		const updateParallax = () => {
+			const rect = container.getBoundingClientRect();
+			const viewportHeight =
+				window.innerHeight || document.documentElement.clientHeight;
+
+			// Compute progress of container within viewport [0,1]
+			const start = viewportHeight; // when top is at bottom of viewport
+			const end = -rect.height; // when bottom is above viewport
+			const progress = Math.min(
+				1,
+				Math.max(0, (start - rect.top) / (start - end))
+			);
+
+			// Map progress to translateY range (subtle movement)
+			const maxShift = 30; // px; adjust for more/less parallax
+			const translateY = (progress - 0.5) * 2 * maxShift; // range [-maxShift, +maxShift]
+			image.style.setProperty('--parallax-y', `${translateY.toFixed(2)}px`);
+			rafId = null;
+		};
+
+		const onScroll = () => {
+			if (rafId) return;
+			rafId = requestAnimationFrame(updateParallax);
+		};
+
+		window.addEventListener('scroll', onScroll, { passive: true });
+		window.addEventListener('resize', onScroll);
+		// Initial position
+		onScroll();
+
+		return () => {
+			window.removeEventListener('scroll', onScroll);
+			window.removeEventListener('resize', onScroll);
+			if (rafId) cancelAnimationFrame(rafId);
+		};
+	}, []);
 	return (
 		<section id="about" className="about-section">
 			<div className="about-container">
@@ -75,7 +124,6 @@ function AboutSection() {
 			</div>
 			<div className="about-divider" />
 			<div className="about-stats-row">
-
 				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
 					<div className="about-stat-value">
 						{startCount && <CountUp end={25} duration={2.5} suffix="+ Yr" />}
@@ -92,8 +140,7 @@ function AboutSection() {
 						Technical Fields & Sectors Covered
 					</div>
 				</div>
-				
-				
+
 				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
 					<div className="about-stat-value">
 						{startCount && <CountUp end={98} duration={2.0} suffix="%" />}
@@ -101,7 +148,6 @@ function AboutSection() {
 					<div className="about-stat-label">Client Satisfaction Worldwide</div>
 				</div>
 
-				
 				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
 					<div className="about-stat-value">
 						{startCount && (
@@ -112,8 +158,6 @@ function AboutSection() {
 						IP Projects Successfully Delivered
 					</div>
 				</div>
-
-				
 			</div>
 			<div className="about-divider" />
 		</section>
