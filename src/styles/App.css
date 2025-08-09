@@ -215,7 +215,7 @@
 	background-size: 200%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: fadeUpWord 0.8s ease forwards, shine 3s linear infinite;
+	animation: fadeUpWord 0.4s ease forwards, shine 3s linear infinite;
 }
 
 /* Description fade in after title */
@@ -223,7 +223,7 @@
 	opacity: 0;
 	transform: translateY(20px);
 	animation: fadeUp 1s ease-out forwards;
-	animation-delay: 1.5s;
+	animation-delay: 0.5s;
 }
 
 /* Buttons and links appear in sequence */
@@ -235,11 +235,11 @@
 }
 
 .hero-contact-btn {
-	animation-delay: 2.1s;
+	animation-delay: 1s;
 }
 
 .hero-services-link {
-	animation-delay: 2.3s;
+	animation-delay: 1s;
 }
 
 /* Keyframes */

@@ -7,6 +7,8 @@ import NavBar from './components/NavBar';
 import FAQSection from './components/FAQSection';
 import ContactUs from './components/ContactUs';
 import AboutPage from './components/AboutPage';
+import BlogSection from './components/BlogSection';
+import BlogPost from './components/BlogPost';
 import './styles/App.css';
 
 function AppContent() {
@@ -69,6 +71,7 @@ function AppContent() {
 							</header>
 							<AboutSection />
 							<OurSection />
+							<BlogSection />
 							<TestimonialSection />
 							<FAQSection />
 							<FotterSection />
@@ -76,6 +79,7 @@ function AppContent() {
 					}
 				/>
 				<Route path="/contact" element={<ContactUs />} />
+				<Route path="/blog/:id" element={<BlogPost />} />
 				<Route path="/about" element={<AboutPage />} />
 			</Routes>
 		</div>

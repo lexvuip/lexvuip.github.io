@@ -100,6 +100,26 @@ function OurSection() {
 		return () => observer.disconnect();
 	}, []);
 
+	// In-view animation for label and title
+	useEffect(() => {
+		const section = document.getElementById('services');
+		if (!section) return;
+		const targets = section.querySelectorAll('.our-label, .our-title');
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('in-view');
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.2 }
+		);
+		targets.forEach((el) => observer.observe(el));
+		return () => observer.disconnect();
+	}, []);
+
 	useEffect(() => {
 		const prefersReduced = window.matchMedia(
 			'(prefers-reduced-motion: reduce)'

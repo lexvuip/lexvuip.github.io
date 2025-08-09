@@ -139,14 +139,13 @@
 	font-weight: bold;
 	color: var(--color-maroon);
 	margin-bottom: 0.5rem;
-	transition: transform 0.5s ease, opacity 0.5s ease;
-	transform: scale(0.95);
 	opacity: 0;
+	transform: translateY(20px);
 }
 
 .about-stat.revealed .about-stat-value {
-	transform: scale(1);
-	opacity: 1;
+	animation: fadeUp 0.8s ease-out forwards;
+	animation-delay: var(--about-stat-delay, 0s);
 }
 
 .about-stat-label {
@@ -155,6 +154,13 @@
 	color: var(--color-dark-text);
 	margin-bottom: 0.5rem;
 	margin-top: 1rem;
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.about-stat.revealed .about-stat-label {
+	animation: fadeUp 0.8s ease-out forwards;
+	animation-delay: calc(var(--about-stat-delay, 0s) + 0.12s);
 }
 
 /* Mobile styles */
@@ -220,8 +226,10 @@
 
 	.about-image-row {
 		max-width: 100%;
-		height: 320px;
+		height: 260px;
 		border-radius: 0;
+		border-left: 1px solid var(--color-pink-divider);
+		border-right: 1px solid var(--color-pink-divider);
 	}
 
 	.about-stats-row {
@@ -231,28 +239,37 @@
 		gap: 0;
 	}
 
+	/* Each stat is a block with large number on top, label below */
 	.about-stat {
 		width: 100%;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 2rem 1.25rem;
 		border-left: 1px solid var(--color-pink-divider);
 		border-right: 1px solid var(--color-pink-divider);
 		text-align: left;
 	}
 
+	/* Divider between stats */
+	.about-stat:not(:last-child) {
+		border-bottom: 1px solid var(--color-pink-divider);
+	}
+
 	.about-stat-value {
-		font-size: 2.5rem;
-		margin: 0;
+		font-size: clamp(2.6rem, 10.5vw, 3.8rem);
+		line-height: 1;
+		margin: 0 0 0.4rem 0;
 		color: var(--color-maroon);
 	}
 
 	.about-stat-label {
-		font-size: 0.9rem;
+		font-size: 1rem;
 		margin: 0;
-		max-width: 60%;
-		line-height: 1.3;
+		max-width: 100%;
+		line-height: 1.35;
+		color: var(--color-dark-text);
 	}
 
 	.about-divider {

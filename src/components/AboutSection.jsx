@@ -124,7 +124,10 @@ function AboutSection() {
 			</div>
 			<div className="about-divider" />
 			<div className="about-stats-row">
-				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
+				<div
+					className={`about-stat ${startCount ? 'revealed' : ''}`}
+					style={{ '--about-stat-delay': '0s' }}
+				>
 					<div className="about-stat-value">
 						{startCount && <CountUp end={25} duration={2.5} suffix="+ Yr" />}
 					</div>
@@ -132,7 +135,10 @@ function AboutSection() {
 						Serving Individuals & Businesses
 					</div>
 				</div>
-				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
+				<div
+					className={`about-stat ${startCount ? 'revealed' : ''}`}
+					style={{ '--about-stat-delay': '0.12s' }}
+				>
 					<div className="about-stat-value">
 						{startCount && <CountUp end={46} duration={2.5} suffix="+" />}
 					</div>
@@ -141,14 +147,20 @@ function AboutSection() {
 					</div>
 				</div>
 
-				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
+				<div
+					className={`about-stat ${startCount ? 'revealed' : ''}`}
+					style={{ '--about-stat-delay': '0.24s' }}
+				>
 					<div className="about-stat-value">
 						{startCount && <CountUp end={98} duration={2.0} suffix="%" />}
 					</div>
 					<div className="about-stat-label">Client Satisfaction Worldwide</div>
 				</div>
 
-				<div className={`about-stat ${startCount ? 'revealed' : ''}`}>
+				<div
+					className={`about-stat ${startCount ? 'revealed' : ''}`}
+					style={{ '--about-stat-delay': '0.36s' }}
+				>
 					<div className="about-stat-value">
 						{startCount && (
 							<CountUp end={45657} duration={1.5} separator="," suffix="+" />
