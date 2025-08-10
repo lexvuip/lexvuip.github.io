@@ -9,6 +9,7 @@ import ContactUs from './components/ContactUs';
 import AboutPage from './components/AboutPage';
 import BlogSection from './components/BlogSection';
 import BlogPost from './components/BlogPost';
+import ServicesPage from './components/ServicesPage';
 import './styles/App.css';
 
 function AppContent() {
@@ -22,7 +23,7 @@ function AppContent() {
 				key={`${word}-${index}`}
 				style={{ animationDelay: `${startDelay + index * 0.08}s` }}
 			>
-				{word}{' '}
+				{word}&nbsp;
 			</span>
 		));
 	};
@@ -44,7 +45,7 @@ function AppContent() {
 										)}
 										<br />
 										{renderAnimatedWords(
-											['Protection', 'in', 'Every', 'Design.'],
+											['Prodcution', 'and', 'Every', 'Design.'],
 											0.6
 										)}
 									</h1>
@@ -63,7 +64,7 @@ function AppContent() {
 										>
 											Get In Touch
 										</button>
-										<a href="#services" className="hero-services-link">
+										<a href="/services" className="hero-services-link">
 											Our Services
 										</a>
 									</div>
@@ -71,7 +72,7 @@ function AppContent() {
 							</header>
 							<AboutSection />
 							<OurSection />
-							<BlogSection />
+							{/* <BlogSection /> */}
 							<TestimonialSection />
 							<FAQSection />
 							<FotterSection />
@@ -79,8 +80,9 @@ function AppContent() {
 					}
 				/>
 				<Route path="/contact" element={<ContactUs />} />
-				<Route path="/blog/:id" element={<BlogPost />} />
+				{/* <Route path="/blog/:id" element={<BlogPost />} /> */}
 				<Route path="/about" element={<AboutPage />} />
+				<Route path="/services" element={<ServicesPage />} />
 			</Routes>
 		</div>
 	);

@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/NavBar.css';
 
 function NavBar() {
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+	const servicesTimeout = useRef();
 	const navigate = useNavigate();
-
-
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -26,16 +26,16 @@ function NavBar() {
 		};
 
 		window.addEventListener('scroll', handleScroll);
-		
+
 		// Initial check for current path
 		handleScroll();
-		
+
 		// Clean up the event listener when component unmounts
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
-	
+
 	const handleContactClick = () => {
 		navigate('/contact');
 		setMobileMenuOpen(false);
@@ -49,22 +49,87 @@ function NavBar() {
 		setMobileMenuOpen(false);
 	};
 
+	const handleServicesMouseEnter = () => {
+		clearTimeout(servicesTimeout.current);
+		setServicesDropdownOpen(true);
+	};
+	const handleServicesMouseLeave = () => {
+		servicesTimeout.current = setTimeout(
+			() => setServicesDropdownOpen(false),
+			120
+		);
+	};
+
 	return (
 		<>
 			<nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-				<Link to="/" className="navbar-logo">LexVuIP</Link>
-				
+				<Link to="/" className="navbar-logo">
+					LexVuIP
+				</Link>
+
 				{/* Desktop Navigation */}
 				<ul className="navbar-links">
-					<li><Link to="/">Home</Link></li>
-					<li><a href="/#services">Services</a></li>
-					<li><Link to="/about">About</Link></li>
-					<li><a href="/#faq">FAQ</a></li>
-					<li><Link to="/contact">Contact Us</Link></li>
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					<li
+						onMouseEnter={handleServicesMouseEnter}
+						onMouseLeave={handleServicesMouseLeave}
+						className="navbar-services-dropdown-parent"
+					>
+						<Link to="/services" onClick={() => setServicesDropdownOpen(false)}>
+							Services
+						</Link>
+						{servicesDropdownOpen && (
+							<div
+								className="services-dropdown"
+								onMouseEnter={handleServicesMouseEnter}
+								onMouseLeave={handleServicesMouseLeave}
+							>
+								<div className="services-dropdown-section">
+									<div className="services-dropdown-title">IP Solutions</div>
+									<ul>
+										<li>Utility Patent Drawings</li>
+										<li>Design Patent Drawings</li>
+										<li>Trademark Support</li>
+									</ul>
+								</div>
+								<div className="services-dropdown-section">
+									<div className="services-dropdown-title">
+										Paralegal Solutions
+									</div>
+									<ul>
+										<li>Docketing Management</li>
+										<li>E-Filing Services</li>
+										<li>Contact Management Services</li>
+										<li>Trial Preparation</li>
+										<li>Deposition Coordination</li>
+										<li>Compliance Support</li>
+									</ul>
+								</div>
+								<div className="services-dropdown-section">
+									<div className="services-dropdown-title">
+										Custom Solutions
+									</div>
+								</div>
+							</div>
+						)}
+					</li>
+					<li>
+						<Link to="/about">About</Link>
+					</li>
+					<li>
+						<a href="/#faq">FAQ</a>
+					</li>
+					<li>
+						<Link to="/contact">Contact Us</Link>
+					</li>
 				</ul>
-				
+
 				<div className="navbar-contact">
-					<button className="contact-btn" onClick={handleContactClick}>Get In Touch <span className="faq-arrow">→</span></button>
+					<button className="contact-btn" onClick={handleContactClick}>
+						Get In Touch <span className="faq-arrow">→</span>
+					</button>
 				</div>
 
 				{/* Mobile Menu Button */}
@@ -81,14 +146,36 @@ function NavBar() {
 			<div className={`mobile-nav ${mobileMenuOpen ? 'active' : ''}`}>
 				<div className="mobile-nav-content">
 					<ul className="mobile-nav-links">
-						<li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
-						<li><a href="/#services" onClick={closeMobileMenu}>Services</a></li>
-						<li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
-						<li><a href="/#faq" onClick={closeMobileMenu}>FAQ</a></li>
-						<li><Link to="/contact" onClick={closeMobileMenu}>Contact Us</Link></li>
+						<li>
+							<Link to="/" onClick={closeMobileMenu}>
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link to="/services" onClick={closeMobileMenu}>
+								Services
+							</Link>
+						</li>
+						<li>
+							<Link to="/about" onClick={closeMobileMenu}>
+								About
+							</Link>
+						</li>
+						<li>
+							<a href="/#faq" onClick={closeMobileMenu}>
+								FAQ
+							</a>
+						</li>
+						<li>
+							<Link to="/contact" onClick={closeMobileMenu}>
+								Contact Us
+							</Link>
+						</li>
 					</ul>
 					<div className="mobile-nav-contact">
-						<button className="contact-btn" onClick={handleContactClick}>Get In Touch</button>
+						<button className="contact-btn" onClick={handleContactClick}>
+							Get In Touch
+						</button>
 					</div>
 				</div>
 			</div>

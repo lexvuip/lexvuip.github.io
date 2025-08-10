@@ -13,7 +13,7 @@
 
 .testimonial-container {
 	width: 100%;
-	max-width: 1300px;
+	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -34,7 +34,7 @@
 
 .testimonial-carousel-container {
 	width: 100%;
-	max-width: 800px;
+	/* max-width: 1200px; */
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 3vw;
@@ -67,7 +67,7 @@
 	background: var(--color-light-pink);
 	border-radius: 24px;
 	width: 80%;
-	max-width: 600px;
+	/* max-width: 1200px; */
 	min-height: 280px;
 	flex: 0 0 auto;
 	display: flex;
