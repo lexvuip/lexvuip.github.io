@@ -247,18 +247,14 @@
 		justify-content: flex-start;
 		align-items: flex-start;
 		padding: 2rem 1.25rem;
+		margin-bottom: 2rem;
 		border-left: 1px solid var(--color-pink-divider);
 		border-right: 1px solid var(--color-pink-divider);
 		text-align: left;
 	}
 
-	/* Divider between stats */
-	.about-stat:not(:last-child) {
-		border-bottom: 1px solid var(--color-pink-divider);
-	}
-
 	.about-stat-value {
-		font-size: clamp(2.6rem, 10.5vw, 3.8rem);
+		font-size: clamp(5.6rem, 10.5vw, 3.8rem);
 		line-height: 1;
 		margin: 0 0 0.4rem 0;
 		color: var(--color-maroon);
@@ -287,11 +283,11 @@
 	}
 
 	.about-stat-value {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 
 	.about-stat-label {
-		font-size: 0.8rem;
+		font-size: 1rem;
 	}
 }
 
