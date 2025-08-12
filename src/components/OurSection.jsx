@@ -11,12 +11,11 @@ const services = [
 		number: 1,
 		title: (
 			<>
-				Precision <em>IP Solutions, Built for Attorneys</em> Who Protect
-				Innovation
+				<em>Paralegal Support</em> That Keeps Your Practice Moving
 			</>
 		),
 		description:
-			'At LexVuIP, we understand that accuracy isn’t a luxury it’s a necessity. That’s why we deliver specialized intellectual property support services designed to meet the high standards of patent attorneys, IP law firms, and legal teams worldwide.',
+			'Our experienced remote paralegal team manages Docketing, E-Filing, and Contact Records with meticulous attention to detail—while also supporting Trial Preparation, Deposition Coordination, and Compliance so you can focus on advocacy, not administration.',
 		image: lawerImage,
 		alt: 'Utility Patent Drawings',
 	},
@@ -24,11 +23,11 @@ const services = [
 		number: 2,
 		title: (
 			<>
-				Utility <em>Patent Drawings</em>
+				Comprehensive <em>IP Solutions</em> for Global Attorneys
 			</>
 		),
 		description:
-			'Expertly detailed technical patent illustrations for mechanical, electrical, chemical, and software inventions. Our drawings are fully compliant with USPTO, EPO, and other global patent office standards, ensuring smooth prosecution and clear examiner communication.',
+			'From intricate Utility Patent Drawings to visually precise Design Patent Illustrations and globally compliant Trademark Support, we deliver intellectual property assets that meet USPTO, EPO, and WIPO standards—ensuring your filings are clear, compliant, and strategically positioned for success.',
 		image: utilityPatentDrawingImage,
 		alt: 'Utility Patent Drawings',
 	},
@@ -36,37 +35,13 @@ const services = [
 		number: 3,
 		title: (
 			<>
-				Design <em>Patent Drawings</em>
+				Tailored <em>Support for Unique Legal</em> Workflows
 			</>
 		),
 		description:
-			'We create clean, high-resolution design patent illustrations that align with the exacting visual format requirements of design patent offices worldwide from the USPTO to the EUIPO and WIPO.',
+			'Whether you need a dedicated resource for high-volume filings, specialized illustration styles, or firm-specific compliance tasks, we integrate seamlessly into your processes—delivering accurate, on-time support that aligns perfectly with your team’s standards and client expectations.',
 		image: designPatentDrawingImage,
 		alt: 'Design Patent Illustrations',
-	},
-	{
-		number: 4,
-		title: (
-			<>
-				Trademark <em>Support</em>
-			</>
-		),
-		description:
-			'Professional trademark drawings and renderings, including wordmarks, logos, and stylized marks, formatted to meet global trademark office requirements for seamless registration.',
-		image: trademarkDesignImage,
-		alt: 'Trademark Design',
-	},
-	{
-		number: 5,
-		title: (
-			<>
-				Custom <em>Solutions</em>
-			</>
-		),
-		description:
-			'Have a unique workflow or firm-specific requirement? We seamlessly integrate into your team’s processes, delivering accurate, on-time support that meets your client’s expectations and yours.',
-		image: customWorkflowImage,
-		alt: 'Custom Workflow',
 	},
 ];
 

@@ -10,7 +10,11 @@ import AboutPage from './components/AboutPage';
 import BlogSection from './components/BlogSection';
 import BlogPost from './components/BlogPost';
 import ServicesPage from './components/ServicesPage';
+
 import './styles/App.css';
+import ParaLegalSolutions from './components/ParalegalSolutionsPage';
+import IpSolutionsPage from './components/IpSolutionsPage';
+import CustomSolutionsPage from './components/CustomSolutionsPage';
 
 function AppContent() {
 	const location = useLocation();
@@ -83,6 +87,15 @@ function AppContent() {
 				{/* <Route path="/blog/:id" element={<BlogPost />} /> */}
 				<Route path="/about" element={<AboutPage />} />
 				<Route path="/services" element={<ServicesPage />} />
+				<Route
+					path="/service/paralegalsolutions"
+					element={<ParaLegalSolutions />}
+				/>
+				<Route path="/service/ipsolutions" element={<IpSolutionsPage />} />
+				<Route
+					path="/service/customsolutions"
+					element={<CustomSolutionsPage />}
+				/>
 			</Routes>
 		</div>
 	);

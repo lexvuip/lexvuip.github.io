@@ -14,13 +14,42 @@ function FotterSection() {
 					</div>
 				</div>
 				<div className="footer-col footer-links">
-					<div className="footer-links-title">Company</div>
-					<ul className="footer-links-list">
-						<li>Home</li>
-						<li>About</li>
-						<li>Services</li>
-						<li>FAQ</li>
-					</ul>
+					<div>
+						<div className="footer-links-title">Company</div>
+						<ul className="footer-links-list">
+							<li>Home</li>
+							<li>About</li>
+							<li>Services</li>
+							<li>FAQ</li>
+						</ul>
+					</div>
+					<div>
+						<div className="footer-links-title">IP Solutions</div>
+						<ul className="footer-links-list">
+							<li>Utility Patent Drawings</li>
+							<li>Design Patent Drawings</li>
+							<li>Trademark Support</li>
+						</ul>
+					</div>
+					<div>
+						<div className="footer-links-title">Paralegal Solutions</div>
+						<ul className="footer-links-list">
+							<li>Docketing Management</li>
+							<li>E-Filling Services</li>
+							<li>Contact Management Services</li>
+							<li>Trial Preparation</li>
+							<li>Deposition Coordination</li>
+							<li>Compliance Support</li>
+						</ul>
+					</div>
+					<div>
+						<div className="footer-links-title">Custom Solutions</div>
+						<ul className="footer-links-list">
+							<li>Tailored IP & Paralegal Support</li>
+							<li>Workflow Automation</li>
+							<li>Special Projects & Consulting</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div className="footer-divider" />

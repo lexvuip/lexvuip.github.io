@@ -3,8 +3,8 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0 8%;
-	background-color: var(--color-bg-light);
-	min-height: 100vh;
+	background-color: var(--color-white);
+	min-height: 95vh;
 }
 
 .our-journey-section {
@@ -14,6 +14,7 @@
 	text-align: left;
 	gap: 50px;
 	align-items: flex-start;
+	min-height: 90vh;
 }
 
 .our-journey-left-column {
@@ -85,7 +86,7 @@
 
 .our-journey-description {
 	font-family: var(--font-sans);
-	font-size: 1rem;
+	font-size: 1.15rem;
 	color: var(--color-text);
 	line-height: 1.6;
 	margin-bottom: 30px;
@@ -160,7 +161,7 @@
 }
 
 .about-page-description {
-	font-size: 1.1rem;
+	font-size: 1.15rem;
 	color: var(--color-muted-text);
 	margin-bottom: 30px;
 	line-height: 1.6;
