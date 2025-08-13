@@ -1,6 +1,12 @@
 import React from 'react';
 import '../styles/ParalegalSolutionsPage.css';
 import lawyerImage from '../assets/stockimages/lawer.jpg';
+import paralegalSolutionsServiceHeroImage from '../assets/stockimages/paralegalSolutionsServiceHeroImage.jpg';
+import caseManagement from '../assets/stockimages/caseManagement.jpg';
+import docketingManagement from '../assets/stockimages/docketingManagement.jpg';
+import eFillingServices from '../assets/stockimages/eFillingServices.jpg';
+import contactManagementServices from '../assets/stockimages/contactManagementServices.jpg';
+import trailPreparation from '../assets/stockimages/trailPreparation.jpg';
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
@@ -8,7 +14,7 @@ import FAQSection from './FAQSection';
 function ParaLegalSolutions() {
 	const services = [
 		{
-			image: lawyerImage,
+			image: caseManagement,
 			title: 'Case',
 			subtitle: 'Management',
 			desc: 'From intake to resolution, we organize, track, and update every part of your case, ensuring nothing slips through the cracks and keeping you informed on status and next steps.',
@@ -19,7 +25,7 @@ function ParaLegalSolutions() {
 			],
 		},
 		{
-			image: lawyerImage,
+			image: docketingManagement,
 			title: 'Docketing',
 			subtitle: 'Management',
 			desc: 'Accurate, real-time tracking of case deadlines, hearings, and filings. We ensure nothing slips through the cracks so you can work with confidence.',
@@ -30,7 +36,7 @@ function ParaLegalSolutions() {
 			],
 		},
 		{
-			image: lawyerImage,
+			image: eFillingServices,
 			title: 'E-Filling',
 			subtitle: 'Services',
 			desc: 'From local courts to federal systems, we handle precise and timely electronic filings. You send the final documents — we ensure they’re in the right hands, at the right time.',
@@ -41,7 +47,7 @@ function ParaLegalSolutions() {
 			],
 		},
 		{
-			image: lawyerImage,
+			image: contactManagementServices,
 			title: 'Contact Management',
 			subtitle: 'Services',
 			desc: 'Organized, up-to-date client and witness records. We streamline communication logs, ensuring you have the right information at your fingertips.',
@@ -52,7 +58,7 @@ function ParaLegalSolutions() {
 			],
 		},
 		{
-			image: lawyerImage,
+			image: trailPreparation,
 			title: 'Trial',
 			subtitle: 'Preparation',
 			desc: 'Case binders, exhibits, witness lists, ready when you need them. We work behind the scenes so you can walk into court fully prepared.',
@@ -104,7 +110,7 @@ function ParaLegalSolutions() {
 			</div>
 			<div className="services-hero-image-row">
 				<img
-					src={lawyerImage}
+					src={paralegalSolutionsServiceHeroImage}
 					alt="Law building"
 					className="services-hero-image"
 				/>

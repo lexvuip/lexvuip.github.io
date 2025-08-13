@@ -5,6 +5,12 @@ import customWorkflow from '../assets/stockimages/customworkflow.jpg';
 import desingPatentDrawing from '../assets/stockimages/desingpatentdrawing.jpg';
 import tradMarkDesign from '../assets/stockimages/trademarkdesign.jpg';
 import utilityPatentDrawing from '../assets/stockimages/utilitypatentdrawing.jpg';
+import paralegalSolutionsServiceHeroImage from '../assets/stockimages/paralegalSolutionsServiceHeroImage.jpg';
+import caseManagement from '../assets/stockimages/caseManagement.jpg';
+import docketingManagement from '../assets/stockimages/docketingManagement.jpg';
+import eFillingServices from '../assets/stockimages/eFillingServices.jpg';
+import contactManagementServices from '../assets/stockimages/contactManagementServices.jpg';
+import trailPreparation from '../assets/stockimages/trailPreparation.jpg';
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
@@ -141,8 +147,8 @@ function ServicesPage() {
 					<div className="legal-services-cards-row services-leadership-style">
 						<div className="legal-service-card">
 							<img
-								src={lawyerImage}
-								alt="Docketing Management"
+								src={caseManagement}
+								alt="case Management"
 								className="legal-service-image"
 							/>
 							<div className="legal-service-content">
@@ -155,7 +161,7 @@ function ServicesPage() {
 						</div>
 						<div className="legal-service-card">
 							<img
-								src={lawyerImage}
+								src={docketingManagement}
 								alt="Docketing Management"
 								className="legal-service-image"
 							/>
@@ -169,7 +175,7 @@ function ServicesPage() {
 						</div>
 						<div className="legal-service-card">
 							<img
-								src={lawyerImage}
+								src={eFillingServices}
 								alt="E-Filing Services"
 								className="legal-service-image"
 							/>
@@ -183,7 +189,7 @@ function ServicesPage() {
 						</div>
 						<div className="legal-service-card">
 							<img
-								src={utilityPatentDrawing}
+								src={contactManagementServices}
 								alt="Contact Management Services"
 								className="legal-service-image"
 							/>
@@ -198,7 +204,7 @@ function ServicesPage() {
 						</div>
 						<div className="legal-service-card">
 							<img
-								src={tradMarkDesign}
+								src={trailPreparation}
 								alt="Trial Preparation"
 								className="legal-service-image"
 							/>

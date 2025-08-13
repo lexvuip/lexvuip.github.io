@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/IpSolutionsPage.css';
-import lawyerImage from '../assets/stockimages/lawer.jpg';
+import ipSolutionsServiceHeroImage from '../assets/stockimages/ipSolutionsServiceHeroImage.jpg';
 import utilityPatent from '../assets/stockimages/utilitypatentdrawing.jpg';
 import designPatent from '../assets/stockimages/desingpatentdrawing.jpg';
 import tradeMark from '../assets/stockimages/trademarkdesign.jpg';
@@ -63,7 +63,7 @@ function IpSolutionsPage() {
 			</div>
 			<div className="services-hero-image-row">
 				<img
-					src={lawyerImage}
+					src={ipSolutionsServiceHeroImage}
 					alt="Law building"
 					className="services-hero-image"
 				/>
