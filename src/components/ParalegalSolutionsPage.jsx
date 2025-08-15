@@ -145,28 +145,6 @@ function ParaLegalSolutions() {
 						</p>
 					</div>
 				</div>
-				<div className="services-stats-row">
-					<div className="services-stat">
-						<div className="services-stat-value">1,200+</div>
-						<div className="services-stat-label">
-							Cases Successfully Handled
-						</div>
-					</div>
-					<div className="services-stat">
-						<div className="services-stat-value">98%</div>
-						<div className="services-stat-label">Client Satisfaction Rate</div>
-					</div>
-					<div className="services-stat">
-						<div className="services-stat-value">20+ Years</div>
-						<div className="services-stat-label">
-							Serving Individuals & Businesses
-						</div>
-					</div>
-					<div className="services-stat">
-						<div className="services-stat-value">40+</div>
-						<div className="services-stat-label">Industries Represented</div>
-					</div>
-				</div>
 
 				{/* New Legal Services Section */}
 				<section className="legal-services-section">

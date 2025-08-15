@@ -76,33 +76,19 @@ function AboutSection() {
 				<div className="about-content">
 					<div className="about-label">About Us</div>
 					<h2 className="about-title">
-						At LexVuIP, We Don’t Just Draw — We Strategize, Illustrate, and
-						Deliver IP Confidence.
+						At LexVu, we take the busywork off your plate so you can focus on winning the case and protecting what matters most
 					</h2>
 					<p className="about-description">
-						With over 25 years of specialized experience in Intellectual
-						Property services, LexVuIP has been a trusted partner to IP
-						attorneys, patent law firms, and corporate legal teams around the
-						world.
+						With over 25 years supporting attorneys worldwide, we deliver precise patent drawings, compliant filings, and end-to-end paralegal support - fast, accurate, and always aligned with your strategy.
 					</p>
 					<p className="about-description">
-						We bring a deep understanding of global IP standards especially
-						USPTO, EUIPO, PCT and WIPO Patent Office guidelines to every
-						project. Our team of skilled illustrators and IP professionals
-						delivers high-precision utility patent drawings, design patent
-						illustrations, trademark representations, and end-to-end patent and
-						industrial design filing support.
+						Our paralegal services handle the administrative grind - docketing, eFiling, trial prep, client coordination. Our IP services cover every stage of patent and trademark support - from precise USPTO, EPO, PCT, and WIPO-compliant utility and design drawings to accurate, on-demand revisions, so you can keep your energy where it matters most: building strategies and winning cases.
 					</p>
 					<p className="about-description">
-						Whether you're preparing a complex utility patent application or
-						need fast-turnaround design drawings, we help you present your
-						client’s innovation clearly, professionally, and in full compliance
-						with international IP requirements.
+						Whether you’re protecting an invention, prosecuting a trademark, or preparing for trial, we deliver clarity, compliance, and confidence - without you having to chase vendors, reformat documents, or worry about deadlines.
 					</p>
 					<p className="about-description">
-						At LexVuIP, we believe that your ideas deserve more than protection,
-						they deserve strategic representation that strengthens your filing
-						from the ground up.
+						At LexVuIP, we believe legal work should be spent on arguments, not admin. Our job is to make sure your focus stays on the win.
 					</p>
 					<div className="about-actions">
 						<button
@@ -163,11 +149,11 @@ function AboutSection() {
 				>
 					<div className="about-stat-value">
 						{startCount && (
-							<CountUp end={45657} duration={1.5} separator="," suffix="+" />
+							<CountUp end={121177} duration={1.5} separator="," suffix="+" />
 						)}
 					</div>
 					<div className="about-stat-label">
-						IP Projects Successfully Delivered
+						Combined Legal projects Successfully Delivered
 					</div>
 				</div>
 			</div>
