@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react'; // <-- This is correct
 import AboutSection from './components/AboutSection';
 import OurSection from './components/OurSection';
 import FotterSection from './components/FotterSection';
@@ -17,8 +18,8 @@ import IpSolutionsPage from './components/IpSolutionsPage';
 import CustomSolutionsPage from './components/CustomSolutionsPage';
 
 function AppContent() {
-	const location = useLocation();
-	const isContactPage = location.pathname === '/contact';
+	// const location = useLocation();
+	// const isContactPage = location.pathname === '/contact';
 	const navigate = useNavigate();
 
 	const renderAnimatedWords = (words, startDelay = 0) => {
@@ -84,7 +85,7 @@ function AppContent() {
 					}
 				/>
 				<Route path="/contact" element={<ContactUs />} />
-				{/* <Route path="/blog/:id" element={<BlogPost />} /> */}
+				<Route path="/blog/:id" element={<BlogPost />} />
 				<Route path="/about" element={<AboutPage />} />
 				<Route path="/services" element={<ServicesPage />} />
 				<Route
@@ -101,8 +102,24 @@ function AppContent() {
 	);
 }
 
+// ScrollToTop Component to reset the scroll position on route change
+const ScrollToTop = () => {
+	const location = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0); // Scroll to the top of the page on navigation
+	}, [location]);
+
+	return null;
+};
+
 function App() {
-	return <AppContent />;
+	return (
+		<>
+			<ScrollToTop /> {/* Ensure the scroll resets on route change */}
+			<AppContent />
+		</>
+	);
 }
 
 export default App;

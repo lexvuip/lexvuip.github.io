@@ -5,7 +5,7 @@ import customWorkflow from '../assets/stockimages/customworkflow.jpg';
 import desingPatentDrawing from '../assets/stockimages/desingpatentdrawing.jpg';
 import tradMarkDesign from '../assets/stockimages/trademarkdesign.jpg';
 import utilityPatentDrawing from '../assets/stockimages/utilitypatentdrawing.jpg';
-import paralegalSolutionsServiceHeroImage from '../assets/stockimages/paralegalSolutionsServiceHeroImage.jpg';
+import complianceSupport from '../assets/stockimages/complianceSupport.jpg';
 import caseManagement from '../assets/stockimages/caseManagement.jpg';
 import docketingManagement from '../assets/stockimages/docketingManagement.jpg';
 import eFillingServices from '../assets/stockimages/eFillingServices.jpg';
@@ -230,7 +230,7 @@ function ServicesPage() {
 						</div>
 						<div className="legal-service-card">
 							<img
-								src={customWorkflow}
+								src={complianceSupport}
 								alt="Compliance Support"
 								className="legal-service-image"
 							/>

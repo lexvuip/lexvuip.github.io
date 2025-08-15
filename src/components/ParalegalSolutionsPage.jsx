@@ -7,6 +7,7 @@ import docketingManagement from '../assets/stockimages/docketingManagement.jpg';
 import eFillingServices from '../assets/stockimages/eFillingServices.jpg';
 import contactManagementServices from '../assets/stockimages/contactManagementServices.jpg';
 import trailPreparation from '../assets/stockimages/trailPreparation.jpg';
+import complianceSupport from '../assets/stockimages/complianceSupport.jpg';
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
@@ -80,7 +81,7 @@ function ParaLegalSolutions() {
 			],
 		},
 		{
-			image: lawyerImage,
+			image: complianceSupport,
 			title: 'Compliance',
 			subtitle: 'Support',
 			desc: 'We monitor court requirements, procedural rules, and documentation standards, helping your practice stay compliant and avoid costly delays.',
