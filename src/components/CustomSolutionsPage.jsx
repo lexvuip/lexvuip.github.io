@@ -71,11 +71,7 @@ function CustomSolutionsPage() {
 				<div className="services-stats-content">
 					<div className="services-stats-left">
 						<h2 className="services-stats-title">
-							<span className="italic">Protecting</span> Rights, Resolving
-							Disputes, and
-							<br />
-							Delivering Results for Over Two{' '}
-							<span className="italic">Decades</span>
+							Your firm’s workflow, our support - <span className="italic">customized, accurate, and always</span> on time.
 						</h2>
 						<button className="services-hero-btn stats-btn">
 							Get In Touch <span className="arrow">→</span>
@@ -83,20 +79,13 @@ function CustomSolutionsPage() {
 					</div>
 					<div className="services-stats-right">
 						<p>
-							We help individuals, families, and businesses resolve their legal
-							issues with strategic insight and unwavering commitment. Whatever
-							your case, we're ready to stand by your side.
-						</p>
-						<p>
-							With decades of experience and a passion for justice, we provide
-							clients with clarity, confidence, and powerful legal
-							solutions—tailored to your unique needs.
+							Every firm has its own way of working. We adapt to yours. Whether it’s a specific workflow, reporting method, or client communication style, we integrate directly into your process. The result: accurate, timely support that feels like part of your team and keeps both you and your clients ahead of schedule.
 						</p>
 					</div>
 				</div>
 
 				{/* New Legal Services Section */}
-				<section className="legal-services-section">
+				{/* <section className="legal-services-section">
 					<div className="legal-services-header">
 						<div className="legal-services-badge">OUR LEGAL SERVICES</div>
 						<h2 className="legal-services-title">
@@ -127,7 +116,7 @@ function CustomSolutionsPage() {
 							</div>
 						))}
 					</div>
-				</section>
+				</section> */}
 			</section>
 			<TestimonialSection />
 			<FAQSection />

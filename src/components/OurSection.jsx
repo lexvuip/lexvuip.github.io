@@ -154,8 +154,7 @@ function OurSection() {
 			<div className="our-container">
 				<div className="our-label">Our Services</div>
 				<h2 className="our-title">
-					“Strategic IP Solutions across the entire spectrum – crafted for your
-					unique success.”
+					“Paralegal Support and Practical IP across the spectrum – built around your success”
 				</h2>
 				<div className="our-services-list" ref={listRef}>
 					{services.map((service, idx) => (

@@ -12,24 +12,20 @@ function IpSolutionsPage() {
 	const services = [
 		{
 			image: utilityPatent,
-			title: 'Utility',
-			subtitle: 'Patent Drawings',
+			title: 'Utility Patent',
+			subtitle: 'Drawings',
 			desc: 'Expertly detailed technical patent illustrations for mechanical, electrical, chemical, and software inventions. Our drawings are fully compliant with USPTO, EPO, and other global patent office standards, ensuring smooth prosecution and clear examiner communication.',
 			bullets: [
-				'950+ clients defended',
-				'Felonies, DUIs, white-collar',
-				'Strong, rights-focused defense',
+				'36,353+ Projects Completed Successfully'
 			],
 		},
 		{
 			image: designPatent,
-			title: 'Utility',
-			subtitle: 'Patent Drawings',
+			title: 'Utility Patent',
+			subtitle: 'Design',
 			desc: 'Expertly detailed technical patent illustrations for mechanical, electrical, chemical, and software inventions. Our drawings are fully compliant with USPTO, EPO, and other global patent office standards, ensuring smooth prosecution and clear examiner communication.',
 			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
+				'78,765+ Projects Completed Successfully'
 			],
 		},
 		{
@@ -38,9 +34,7 @@ function IpSolutionsPage() {
 			subtitle: 'Support',
 			desc: 'Professional trademark drawings and renderings, including wordmarks, logos, and stylized marks, formatted to meet global trademark office requirements for seamless registration.',
 			bullets: [
-				'1,100+ cases resolved',
-				'Divorce, custody, adoption',
-				'Compassionate advocacy',
+				'6,059+ Projects Completed Successfully'
 			],
 		},
 	];
@@ -53,9 +47,7 @@ function IpSolutionsPage() {
 					Around Your <span className="italic">Needs</span>
 				</h1>
 				<p className="services-hero-description">
-					For over two decades, we’ve stood with clients through their most
-					pivotal moments—providing trusted legal counsel, winning major cases,
-					and shaping futures through law.
+					For over two decades, we’ve stood with clients through their most pivotal moments, providing trusted legal support, winning major cases, and shaping futures through law.
 				</p>
 				<button className="services-hero-btn">
 					Get In Touch <span className="arrow">→</span>

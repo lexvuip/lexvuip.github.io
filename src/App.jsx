@@ -45,22 +45,17 @@ function AppContent() {
 								<div className="hero-content">
 									<h1 className="hero-title">
 										{renderAnimatedWords(
-											['Precision', 'in', 'Every', 'Line'],
+											['Precision', 'in', 'Every', 'Filing'],
 											0
 										)}
 										<br />
 										{renderAnimatedWords(
-											['Prodcution', 'and', 'Every', 'Design.'],
+											['Clarity', 'in', 'Every', 'Design.'],
 											0.6
 										)}
 									</h1>
 									<p className="hero-description">
-										Your ideas deserve more than just documentation—they deserve
-										distinction. At LexVuIP, we transform concepts into powerful
-										visuals that speak the language of protection. With a team
-										of sharp-eyed artists, engineers, and drafting pros, we
-										don't just meet USPTO standards—we exceed expectations,
-										every time.
+										Your cases deserve more than routine paperwork. They deserve strategy and accuracy. At LexVu, we take care of the details that protect your clients and free up your time. Our team is trained in filings, trial preparation, managing clients, docket management and patent support. We don’t just follow procedure; we raise the standard every time.
 									</p>
 									<div className="hero-actions">
 										<button
