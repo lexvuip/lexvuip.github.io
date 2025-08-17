@@ -12,18 +12,28 @@ function IpSolutionsPage() {
 	const services = [
 		{
 			image: utilityPatent,
-			title: 'Utility Patent',
-			subtitle: 'Drawings',
-			desc: 'Expertly detailed technical patent illustrations for mechanical, electrical, chemical, and software inventions. Our drawings are fully compliant with USPTO, EPO, and other global patent office standards, ensuring smooth prosecution and clear examiner communication.',
+			title: 'Design',
+			subtitle: 'Patents',
+			headingOne: "Precision That Protects",
+			descOne: 'For design patents, every line and curve matters. We create drawings that highlight the unique visual qualities of your product while following USPTO and international standards closely.',
+			headingTwo: "Showcase Your Vision",
+			descTwo: "Our drawings do more than just document your design; they improve it. By making its distinct features clear, we help examiners recognize what sets your product apart.",
+			headingThree: "Tailored Service",
+			descThree: "No two designs are the same. That’s why we adjust our approach to fit your specific needs, ensuring accuracy, originality, and protection for your intellectual property.",
 			bullets: [
 				'36,353+ Projects Completed Successfully'
 			],
 		},
 		{
 			image: designPatent,
-			title: 'Utility Patent',
-			subtitle: 'Design',
-			desc: 'Expertly detailed technical patent illustrations for mechanical, electrical, chemical, and software inventions. Our drawings are fully compliant with USPTO, EPO, and other global patent office standards, ensuring smooth prosecution and clear examiner communication.',
+			title: 'Utility',
+			subtitle: 'Patents',
+			headingOne: "Technical Expertise You Can Trust",
+			descOne: 'Our team combines deep engineering knowledge with careful attention to detail. We create utility patent drawings that clearly show every function and component of your invention.',
+			headingTwo: "Clarity That Drives Approval",
+			descTwo: "From reference numbers to arrowheads, every element is crafted to meet USPTO, PCT, and WIPO requirements. This helps examiners understand your invention quickly and boosts your application’s chance of success.",
+			headingThree: "Collaborative Process",
+			descThree: "We work closely with you at every step. We ensure the drawings meet technical standards and reflect the true nature of your innovation.",
 			bullets: [
 				'78,765+ Projects Completed Successfully'
 			],
@@ -32,7 +42,12 @@ function IpSolutionsPage() {
 			image: tradeMark,
 			title: 'Trademark',
 			subtitle: 'Support',
-			desc: 'Professional trademark drawings and renderings, including wordmarks, logos, and stylized marks, formatted to meet global trademark office requirements for seamless registration.',
+			headingOne: "Your Brand, Defined Clearly",
+			descOne: 'We create trademark drawings that capture the essence of your identity while meeting the exact requirements for legal protection.',
+			headingTwo: "Visual Strength, Legal Power",
+			descTwo: "Our work boosts brand recognition and acts as a protective layer. It prevents unauthorized use and ensures consistency across all applications.",
+			headingThree: "Aligned With Your Vision",
+			descThree: "We collaborate with you to reflect your brand’s voice. We ensure that your trademark is not only compliant but also connects with your audience.",
 			bullets: [
 				'6,059+ Projects Completed Successfully'
 			],
@@ -63,7 +78,7 @@ function IpSolutionsPage() {
 
 			{/* New Section: Stats and Description */}
 			<section className="services-stats-section">
-				<div className="services-stats-content">
+				{/* <div className="services-stats-content">
 					<div className="services-stats-left">
 						<h2 className="services-stats-title">
 							<span className="italic">Protecting</span> Rights, Resolving
@@ -88,7 +103,7 @@ function IpSolutionsPage() {
 							solutions—tailored to your unique needs.
 						</p>
 					</div>
-				</div>
+				</div> */}
 
 				{/* New Legal Services Section */}
 				<section className="legal-services-section">
@@ -109,10 +124,15 @@ function IpSolutionsPage() {
 								/>
 								<div className="separate-legal-service-content">
 									<h3 className="separate-legal-service-title">
-										{service.title}{' '}
-										<span className="italic">{service.subtitle}</span>
+										<span className="italic">{service.title}</span>{' '}
+										{service.subtitle}
 									</h3>
-									<p className="separate-legal-service-desc">{service.desc}</p>
+									<h4>{service.headingOne}</h4>
+									<p className="separate-legal-service-desc">{service.descOne}</p>
+									<h4>{service.headingTwo}</h4>
+									<p className="separate-legal-service-desc">{service.descTwo}</p>
+									<h4>{service.headingThree}</h4>
+									<p className="separate-legal-service-desc">{service.descThree}</p>
 									<ul className="separate-legal-service-list">
 										{service.bullets.map((b, i) => (
 											<li key={i}>{b}</li>
