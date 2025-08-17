@@ -55,7 +55,7 @@ function CustomSolutionsPage() {
 					and shaping futures through law.
 				</p>
 				<button className="services-hero-btn">
-					Talk to a Lawyer <span className="arrow">→</span>
+					Get In Touch <span className="arrow">→</span>
 				</button>
 			</div>
 			<div className="services-hero-image-row">
@@ -78,7 +78,7 @@ function CustomSolutionsPage() {
 							<span className="italic">Decades</span>
 						</h2>
 						<button className="services-hero-btn stats-btn">
-							Talk to a Lawyer <span className="arrow">→</span>
+							Get In Touch <span className="arrow">→</span>
 						</button>
 					</div>
 					<div className="services-stats-right">
