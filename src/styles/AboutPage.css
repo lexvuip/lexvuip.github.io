@@ -249,7 +249,7 @@
       text-align: center;
       padding: 4rem 2rem;
       max-width: 1440px;
-      margin: auto;
+      margin: 7rem auto 0 auto;
     }
 
 .section-wrapper h2 {
@@ -283,8 +283,8 @@
     } */
 
 .icon-circle {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       margin: 0 auto 1.5rem auto;
       background: #00AEEF;
       border-radius: 50%;
@@ -292,7 +292,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-    }
+}
 
 .icon-circle img {
       width: 100%;

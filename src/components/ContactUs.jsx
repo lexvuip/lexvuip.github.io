@@ -71,8 +71,8 @@ function ContactUs() {
 			>
 				<div className="contact-header-content">
 					<h1 className="contact-title">
-						Let's Talk About{' '}
-						<span className="contact-title-emphasis">Your IP Needs</span>
+						Your{' '}
+						<span className="contact-title-emphasis"> IP Needs & Paralegal Solutions Start Here</span>
 					</h1>
 				</div>
 			</div>

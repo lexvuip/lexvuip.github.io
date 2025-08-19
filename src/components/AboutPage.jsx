@@ -14,7 +14,7 @@ function AboutPage() {
     let navigate = useNavigate();
     return (
         <div>
-        <section className="about-page-section">
+        {/* <section className="about-page-section">
             <div className="about-page-content">
                 <h1 className="about-page-title">Innovation. Secured by <span className="about-page-emphasis">Expertise.</span></h1>
                 <p className="about-page-description">
@@ -25,7 +25,7 @@ function AboutPage() {
             <div className="about-page-image-container">
                 <img src={lawyerImage} alt="Lawyer" className="about-page-image" />
             </div>
-        </section>
+        </section> */}
        <section class="section-wrapper">
     <h2>At LexVuIP, We Provide Precise Support, From Paralegal Services to Patent Drawings, So Attorneys Can Focus on Advocacy Instead of Administration.</h2>
     
@@ -35,24 +35,24 @@ function AboutPage() {
         <div class="icon-circle">
           <img src={ourMission} alt="Mission Icon"/>
         </div>
-        <h3>Our mission</h3>
-        <p>We aim to support attorneys with reliable, detail-oriented help in both intellectual property and litigation. We ensure every filing, drawing, and deadline is managed with care.</p>
+        <h3>Our Mission</h3>
+        <p>We aim to <b>support</b> attorneys with <b>reliable</b>, detail-oriented <b>help</b> in both intellectual property and litigation. <b>We</b> ensure every filing, drawing, and deadline is managed with <b>care</b>.</p>
       </div>
 
       <div class="card">
         <div class="icon-circle">
           <img src={ourPromise} alt="Promise Icon" />
         </div>
-        <h3>Our promise</h3>
-        <p>We relieve the pressure on your desk. Whether you need design patent figures or trial prep documents, our work is accurate, compliant, and delivered on time every time.</p>
+        <h3>Our Promise</h3>
+        <p>We <b>relieve the pressure</b> on your desk. Whether you need design patent figures or trial prep documents, our work is <b>accurate</b>, <b>compliant</b>, and <b>delivered on time every time</b> .</p>
       </div>
 
       <div class="card">
         <div class="icon-circle">
           <img src={ourPurpose} alt="Purpose Icon" />
         </div>
-        <h3>Our purpose</h3>
-        <p>To strengthen the work of attorneys by removing bottlenecks, protecting innovation, and building lasting partnerships rooted in trust, clarity, and results.</p>
+        <h3>Our Purpose</h3>
+        <p>To <b>strengthen</b> the work of attorneys by removing <b>bottlenecks</b>, protecting innovation, and building lasting <b>partnerships</b> rooted in <b>trust</b>, <b>clarity</b>, and <b>results</b>.</p>
       </div>
 
     </div>
