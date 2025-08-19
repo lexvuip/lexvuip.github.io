@@ -74,9 +74,17 @@ function AboutSection() {
 		<section id="about" className="about-section">
 			<div className="about-container">
 				<div className="about-content">
-					<div className="about-label">About Us</div>
+					{/* <div className="about-label">About Us</div> */}
+					<div className="our-journey-header">
+                    <div className="our-journey-arrow-container">
+                        <span className="our-journey-arrow"></span>
+                        <span className="our-journey-arrow"></span>
+                        <span className="our-journey-arrow"></span>
+                    </div>
+                    <h2 className="our-journey-title-small">ABOUT</h2>
+                </div>
 					<h2 className="about-title">
-						At LexVu, we take the busywork off your plate so you can focus on winning the case and protecting what matters most
+						At LexVu, we take the busywork off your plate so you can focus on winning the case and protecting what matters most.
 					</h2>
 					<p className="about-description">
 						With over 25 years supporting attorneys worldwide, we deliver precise patent drawings, compliant filings, and end-to-end paralegal support - fast, accurate, and always aligned with your strategy.
@@ -157,7 +165,7 @@ function AboutSection() {
 					</div>
 				</div>
 			</div>
-			<div className="about-divider" />
+			{/* <div className="about-divider" /> */}
 		</section>
 	);
 }

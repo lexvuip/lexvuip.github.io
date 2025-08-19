@@ -6,7 +6,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0 auto 4vw auto;
+	margin: 0 auto 0vw auto;
 	padding: 0;
 }
 
@@ -41,7 +41,7 @@
 	font-weight: bold;
 	color: var(--color-maroon);
 	margin-bottom: 1.5rem;
-	margin-top: 0;
+	margin-top: 1rem;
 	text-align: left;
 }
 
@@ -83,7 +83,7 @@
 .about-divider {
 	width: 100%;
 	border-top: 1.5px solid var(--color-pink-divider);
-	margin: 1.5vw 0;
+	margin: 1vw 0;
 }
 
 /* Parallax image container */
@@ -118,7 +118,7 @@
 .about-stats-row {
 	width: 100%;
 	max-width: 80%;
-	margin: 2vw auto 0 auto;
+	margin: 4vw auto 4vw auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;

@@ -7,8 +7,28 @@ import tradeMark from '../assets/stockimages/trademarkdesign.jpg';
 import FotterSection from './FotterSection';
 import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
+import CountUp from 'react-countup';
+import { useState, useEffect } from 'react';
 
 function IpSolutionsPage() {
+	const [startCount, setStartCount] = useState(false);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const section = document.querySelector('.about-stats-row');
+			const rect = section?.getBoundingClientRect();
+			if (rect?.top < window.innerHeight && !startCount) {
+				setStartCount(true);
+			}
+		};
+
+		// Call once after mount to trigger if already in view
+		handleScroll();
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [startCount]);
+
 	const services = [
 		{
 			image: utilityPatent,
@@ -19,7 +39,7 @@ function IpSolutionsPage() {
 			headingTwo: "Showcase Your Vision",
 			descTwo: "Our drawings do more than just document your design; they improve it. By making its distinct features clear, we help examiners recognize what sets your product apart.",
 			headingThree: "Tailored Service",
-			descThree: "No two designs are the same. That’s why we adjust our approach to fit your specific needs, ensuring accuracy, originality, and protection for your intellectual property.",
+			descThree: "No two designs are the same. That's why we adjust our approach to fit your specific needs, ensuring accuracy, originality, and protection for your intellectual property.",
 			bullets: [
 				'36,353+ Projects Completed Successfully'
 			],
@@ -31,7 +51,7 @@ function IpSolutionsPage() {
 			headingOne: "Technical Expertise You Can Trust",
 			descOne: 'Our team combines deep engineering knowledge with careful attention to detail. We create utility patent drawings that clearly show every function and component of your invention.',
 			headingTwo: "Clarity That Drives Approval",
-			descTwo: "From reference numbers to arrowheads, every element is crafted to meet USPTO, PCT, and WIPO requirements. This helps examiners understand your invention quickly and boosts your application’s chance of success.",
+			descTwo: "From reference numbers to arrowheads, every element is crafted to meet USPTO, PCT, and WIPO requirements. This helps examiners understand your invention quickly and boosts your application's chance of success.",
 			headingThree: "Collaborative Process",
 			descThree: "We work closely with you at every step. We ensure the drawings meet technical standards and reflect the true nature of your innovation.",
 			bullets: [
@@ -47,7 +67,7 @@ function IpSolutionsPage() {
 			headingTwo: "Visual Strength, Legal Power",
 			descTwo: "Our work boosts brand recognition and acts as a protective layer. It prevents unauthorized use and ensures consistency across all applications.",
 			headingThree: "Aligned With Your Vision",
-			descThree: "We collaborate with you to reflect your brand’s voice. We ensure that your trademark is not only compliant but also connects with your audience.",
+			descThree: "We collaborate with you to reflect your brand's voice. We ensure that your trademark is not only compliant but also connects with your audience.",
 			bullets: [
 				'6,059+ Projects Completed Successfully'
 			],
@@ -62,7 +82,7 @@ function IpSolutionsPage() {
 					Around Your <span className="italic">Needs</span>
 				</h1>
 				<p className="services-hero-description">
-					For over two decades, we’ve stood with clients through their most pivotal moments, providing trusted legal support, winning major cases, and shaping futures through law.
+					For over two decades, we've stood with clients through their most pivotal moments, providing trusted legal support, winning major cases, and shaping futures through law.
 				</p>
 				<button className="services-hero-btn">
 					Get In Touch <span className="arrow">→</span>
@@ -78,32 +98,54 @@ function IpSolutionsPage() {
 
 			{/* New Section: Stats and Description */}
 			<section className="services-stats-section">
-				{/* <div className="services-stats-content">
-					<div className="services-stats-left">
-						<h2 className="services-stats-title">
-							<span className="italic">Protecting</span> Rights, Resolving
-							Disputes, and
-							<br />
-							Delivering Results for Over Two{' '}
-							<span className="italic">Decades</span>
-						</h2>
-						<button className="services-hero-btn stats-btn">
-							Get In Touch <span className="arrow">→</span>
-						</button>
+				<div className="about-stats-row">
+					<div
+						className={`about-stat ${startCount ? 'revealed' : ''}`}
+						style={{ '--about-stat-delay': '0s' }}
+					>
+						<div className="about-stat-value">
+							{startCount && <CountUp end={25} duration={2.5} suffix="+ Yr" />}
+						</div>
+						<div className="about-stat-label">
+							Serving Individuals & Businesses
+						</div>
 					</div>
-					<div className="services-stats-right">
-						<p>
-							We help individuals, families, and businesses resolve their legal
-							issues with strategic insight and unwavering commitment. Whatever
-							your case, we're ready to stand by your side.
-						</p>
-						<p>
-							With decades of experience and a passion for justice, we provide
-							clients with clarity, confidence, and powerful legal
-							solutions—tailored to your unique needs.
-						</p>
+					<div
+						className={`about-stat ${startCount ? 'revealed' : ''}`}
+						style={{ '--about-stat-delay': '0.12s' }}
+					>
+						<div className="about-stat-value">
+							{startCount && <CountUp end={46} duration={2.5} suffix="+" />}
+						</div>
+						<div className="about-stat-label">
+							Technical Fields & Sectors Covered
+						</div>
 					</div>
-				</div> */}
+
+					<div
+						className={`about-stat ${startCount ? 'revealed' : ''}`}
+						style={{ '--about-stat-delay': '0.24s' }}
+					>
+						<div className="about-stat-value">
+							{startCount && <CountUp end={98} duration={2.0} suffix="%" />}
+						</div>
+						<div className="about-stat-label">Client Satisfaction Worldwide</div>
+					</div>
+
+					<div
+						className={`about-stat ${startCount ? 'revealed' : ''}`}
+						style={{ '--about-stat-delay': '0.36s' }}
+					>
+						<div className="about-stat-value">
+							{startCount && (
+								<CountUp end={121177} duration={1.5} separator="," suffix="+" />
+							)}
+						</div>
+						<div className="about-stat-label">
+							Combined Legal projects Successfully Delivered
+						</div>
+					</div>
+				</div>
 
 				{/* New Legal Services Section */}
 				<section className="legal-services-section">

@@ -17,6 +17,9 @@ import ParaLegalSolutions from './components/ParalegalSolutionsPage';
 import IpSolutionsPage from './components/IpSolutionsPage';
 import CustomSolutionsPage from './components/CustomSolutionsPage';
 
+// Add this import at the top
+import FloatingCallButton from './components/FloatingCallButton';
+
 function AppContent() {
 	// const location = useLocation();
 	// const isContactPage = location.pathname === '/contact';
@@ -42,6 +45,8 @@ function AppContent() {
 					element={
 						<>
 							<header className="hero-section">
+
+
 								<div className="hero-content">
 									<h1 className="hero-title">
 										{renderAnimatedWords(
@@ -113,6 +118,8 @@ function App() {
 		<>
 			<ScrollToTop /> {/* Ensure the scroll resets on route change */}
 			<AppContent />
+			{/* // Add this component before the closing </div> in AppContent return statement */}
+			<FloatingCallButton />
 		</>
 	);
 }

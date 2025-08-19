@@ -157,7 +157,7 @@ function ContactUs() {
 				</div>
 				<div className="info-item">
 					<h3>Phone</h3>
-					<p>Available Soon</p>
+					<p>856-214-2512</p>
 				</div>
 				<div className="info-item">
 					<h3>Email</h3>
