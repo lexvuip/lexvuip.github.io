@@ -1,67 +1,78 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState , useEffect} from 'react';
 import '../styles/ContactUs.css';
 import contactHeaderBg from '../assets/stockimages/lawer.jpg';
 import FooterSection from '../components/FotterSection';
 
 function ContactUs() {
-	const [formData, setFormData] = useState({
-		fullName: '',
-		email: '',
-		phone: '',
-		subject: '',
-		message: '',
-	});
-	const [message, setMessage] = useState('');
-	const [loading, setLoading] = useState(false);
+	useEffect(() => {
+		// Load HubSpot form script
+		const script = document.createElement('script');
+		script.src = 'https://js-na2.hsforms.net/forms/embed/243609401.js';
+		script.defer = true;
+		document.body.appendChild(script);
 
-	const handleChange = (e) => {
-		setFormData({ ...formData, [e.target.name]: e.target.value });
-	};
+		return () => {
+			// Cleanup script when component unmounts
+			document.body.removeChild(script);
+		};
+	}, []);
+	// const [formData, setFormData] = useState({
+	// 	fullName: '',
+	// 	email: '',
+	// 	phone: '',
+	// 	subject: '',
+	// 	message: '',
+	// });
+	// const [message, setMessage] = useState('');
+	// const [loading, setLoading] = useState(false);
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+	// const handleChange = (e) => {
+	// 	setFormData({ ...formData, [e.target.name]: e.target.value });
+	// };
 
-		setLoading(true);
-		setMessage('');
+	// const handleSubmit = async (e) => {
+	// 	e.preventDefault();
 
-		const webAppUrl =
-			'https://script.google.com/macros/s/AKfycbyi7tB5BqBGbm1YnQwHL0qsAZ9Kku2fP7dyt4xcjO9XgdFlGyFNbzCle74mJ--9Jl4rYQ/exec';
+	// 	setLoading(true);
+	// 	setMessage('');
 
-		const formEncoded = new URLSearchParams();
-		formEncoded.append('fullName', formData.fullName);
-		formEncoded.append('email', formData.email);
-		formEncoded.append('phone', formData.phone);
-		formEncoded.append('subject', formData.subject);
-		formEncoded.append('message', formData.message);
+	// 	const webAppUrl =
+	// 		'https://script.google.com/macros/s/AKfycbyi7tB5BqBGbm1YnQwHL0qsAZ9Kku2fP7dyt4xcjO9XgdFlGyFNbzCle74mJ--9Jl4rYQ/exec';
 
-		console.log(formEncoded);
+	// 	const formEncoded = new URLSearchParams();
+	// 	formEncoded.append('fullName', formData.fullName);
+	// 	formEncoded.append('email', formData.email);
+	// 	formEncoded.append('phone', formData.phone);
+	// 	formEncoded.append('subject', formData.subject);
+	// 	formEncoded.append('message', formData.message);
 
-		try {
-			await fetch(webAppUrl, {
-				method: 'POST',
-				mode: 'no-cors', // Needed for Google Apps Script
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded',
-				},
-				body: formEncoded.toString(),
-			});
+	// 	console.log(formEncoded);
 
-			setMessage("Thank you! We'll be in touch.");
-			setFormData({
-				fullName: '',
-				email: '',
-				phone: '',
-				subject: '',
-				message: '',
-			});
-		} catch (error) {
-			console.error('Submission error:', error);
-			setMessage('Something went wrong. Please try again.');
-		} finally {
-			setLoading(false);
-		}
-	};
+	// 	try {
+	// 		await fetch(webAppUrl, {
+	// 			method: 'POST',
+	// 			mode: 'no-cors', // Needed for Google Apps Script
+	// 			headers: {
+	// 				'Content-Type': 'application/x-www-form-urlencoded',
+	// 			},
+	// 			body: formEncoded.toString(),
+	// 		});
+
+	// 		setMessage("Thank you! We'll be in touch.");
+	// 		setFormData({
+	// 			fullName: '',
+	// 			email: '',
+	// 			phone: '',
+	// 			subject: '',
+	// 			message: '',
+	// 		});
+	// 	} catch (error) {
+	// 		console.error('Submission error:', error);
+	// 		setMessage('Something went wrong. Please try again.');
+	// 	} finally {
+	// 		setLoading(false);
+	// 	}
+	// };
 
 	return (
 		<section className="contact-section">
@@ -71,19 +82,19 @@ function ContactUs() {
 			>
 				<div className="contact-header-content">
 					<h1 className="contact-title">
-						Your{' '}
-						<span className="contact-title-emphasis"> IP Needs & Paralegal Solutions Start Here</span>
+						Let’s Talk About Your {' '}
+						<span className="contact-title-emphasis"> Legal Support Needs</span>
 					</h1>
 				</div>
 			</div>
 			<div className="contact-container">
 				<div className="contact-form-container">
-					<h2 className="contact-form-title">Send Us a Message</h2>
+					{/* <h2 className="contact-form-title">Send Us a Message</h2>
 					<p className="contact-form-description">
 						Tell us a little about your IP matter, and one of our specialists
 						will reach out to you shortly.
-					</p>
-					<form className="contact-form" onSubmit={handleSubmit}>
+					</p> */}
+					{/* <form className="contact-form" onSubmit={handleSubmit}>
 						<div className="form-group">
 							<input
 								type="text"
@@ -143,7 +154,12 @@ function ContactUs() {
 							{loading ? 'Sending...' : 'Submit'}
 						</button>
 					</form>
-					{message && <p className="form-message">{message}</p>}
+					{message && <p className="form-message">{message}</p>} */}
+					<div className="hs-form-frame" 
+						 data-region="na2" 
+						 data-form-id="5e9773c3-00d2-4a9e-959c-0a2d1e4022aa" 
+						 data-portal-id="243609401">
+					</div>
 				</div>
 			</div>
 			<div className="contact-info">
