@@ -69,6 +69,8 @@
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
 }
 
 .services-hero-image {
@@ -77,6 +79,11 @@
 	height: 440px;
 	object-fit: cover;
 	display: block;
+	position: relative;
+	transform: translateY(var(--parallax-y, 0px)) scale(1.08);
+	transition: transform 0.2s ease-out;
+	will-change: transform;
+	backface-visibility: hidden;
 }
 
 @media (max-width: 900px) {
@@ -85,6 +92,13 @@
 	}
 	.services-hero-image {
 		height: 200px;
+	}
+}
+
+/* Reduced motion: disable parallax movement */
+@media (prefers-reduced-motion: reduce) {
+	.services-hero-image {
+		transform: scale(1.08);
 	}
 }
 

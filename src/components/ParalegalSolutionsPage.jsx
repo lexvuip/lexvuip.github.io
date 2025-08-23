@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import '../styles/ParalegalSolutionsPage.css';
 import lawyerImage from '../assets/stockimages/lawer.jpg';
 import paralegalSolutionsServiceHeroImage from '../assets/stockimages/paralegalSolutionsServiceHeroImage.jpg';
@@ -92,6 +93,56 @@ function ParaLegalSolutions() {
 			],
 		},
 	];
+	// Add parallax effect for hero image - MOVED INSIDE THE COMPONENT
+	useEffect(() => {
+		const container = document.querySelector('.services-hero-image-row');
+		const image = document.querySelector('.services-hero-image');
+		if (!container || !image) return;
+
+		const prefersReduced = window.matchMedia(
+			'(prefers-reduced-motion: reduce)'
+		).matches;
+		if (prefersReduced) return;
+
+		let rafId = null;
+
+		const updateParallax = () => {
+			const rect = container.getBoundingClientRect();
+			const viewportHeight =
+				window.innerHeight || document.documentElement.clientHeight;
+
+			// Compute progress of container within viewport [0,1]
+			const start = viewportHeight; // when top is at bottom of viewport
+			const end = -rect.height; // when bottom is above viewport
+			const progress = Math.min(
+				1,
+				Math.max(0, (start - rect.top) / (start - end))
+			);
+
+			// Map progress to translateY range (subtle movement)
+			const maxShift = 30; // px; adjust for more/less parallax
+			const translateY = (progress - 0.5) * 2 * maxShift; // range [-maxShift, +maxShift]
+			image.style.setProperty('--parallax-y', `${translateY.toFixed(2)}px`);
+			rafId = null;
+		};
+
+		const onScroll = () => {
+			if (rafId) return;
+			rafId = requestAnimationFrame(updateParallax);
+		};
+
+		window.addEventListener('scroll', onScroll, { passive: true });
+		window.addEventListener('resize', onScroll);
+		// Initial position
+		onScroll();
+
+		return () => {
+			window.removeEventListener('scroll', onScroll);
+			window.removeEventListener('resize', onScroll);
+			if (rafId) cancelAnimationFrame(rafId);
+		};
+	}, []);
+
 	return (
 		<section className="services-hero-section">
 			<div className="services-hero-content">
