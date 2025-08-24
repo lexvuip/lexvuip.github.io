@@ -9,9 +9,9 @@ import eFillingServices from '../assets/stockimages/eFillingServices.jpg';
 import contactManagementServices from '../assets/stockimages/contactManagementServices.jpg';
 import trailPreparation from '../assets/stockimages/trailPreparation.jpg';
 import complianceSupport from '../assets/stockimages/complianceSupport.jpg';
-import FotterSection from './FotterSection';
+import ParalegalFAQSection from '../components/ParalegalSolutions/ParalegalFAQSection';
+import FotterSection from '../components/FotterSection';
 import TestimonialSection from './TestimonialSection';
-import FAQSection from './FAQSection';
 
 function ParaLegalSolutions() {
 	const services = [
@@ -231,7 +231,7 @@ function ParaLegalSolutions() {
 				</section>
 			</section>
 			<TestimonialSection />
-			<FAQSection />
+			<ParalegalFAQSection />
 			<FotterSection />
 		</section>
 	);
