@@ -134,7 +134,7 @@ function IpSolutionsPage() {
 				<p className="services-hero-description">
 					For over two decades, we've stood with clients through their most pivotal moments, providing trusted legal support, winning major cases, and shaping futures through law.
 				</p>
-				<button className="services-hero-btn">
+				<button className="services-hero-btn" onClick={() => (window.location.href = '/contact')}>
 					Get In Touch <span className="arrow">→</span>
 				</button>
 			</div>

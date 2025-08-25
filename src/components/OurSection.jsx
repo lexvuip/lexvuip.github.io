@@ -177,7 +177,7 @@ function OurSection() {
 					))}
 				</div>
 				<div className="our-learnmore-row">
-					<button className="our-learnmore-btn">Learn More</button>
+					<button className="our-learnmore-btn" onClick={() => (window.location.href = '/services')}>Learn More</button>
 				</div>
 			</div>
 		</section>

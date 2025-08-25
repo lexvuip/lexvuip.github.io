@@ -156,7 +156,7 @@ function ParaLegalSolutions() {
 					pivotal moments, providing trusted legal counsel, winning major cases,
 					and shaping futures through law.
 				</p>
-				<button className="services-hero-btn">
+				<button className="services-hero-btn" onClick={() => (window.location.href = '/contact')}>
 					Get In Touch <span className="arrow">→</span>
 				</button>
 			</div>

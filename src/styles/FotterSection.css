@@ -72,6 +72,14 @@
   .footer-main-row {
     gap: 25px;
   }
+
+   .footer-col {
+    /* flex: none; */
+    /* gap: 15px; */
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+  }
   
   .footer-col {
     gap: 15px;

@@ -26,6 +26,11 @@
 	flex: 0 0 45%;
 	padding-right: 20px;
 	box-sizing: border-box;
+	opacity: 0;
+}
+
+.about-left-column.revealed {
+	animation: fadeFromLeft 1s ease-out forwards;
 }
 
 .about-right-column {
@@ -38,6 +43,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.about-content.revealed {
+	animation: fadeUp 1s ease-out forwards;
+	animation-delay: 0.2s;
 }
 
 .our-journey-header {
@@ -372,3 +384,36 @@
 		transform: translate(-50%, -50%);
 	}
 }
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeFromLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.about-content.revealed > * {
+    animation: fadeUp 0.2s ease-out forwards;
+}
+
+.about-content.revealed > :nth-child(1) { animation-delay: 0.1s; } 
+.about-content.revealed > :nth-child(2) { animation-delay: 0.2s; } 
+.about-content.revealed > :nth-child(3) { animation-delay: 0.3s; } 
+.about-content.revealed > :nth-child(4) { animation-delay: 0.4s; } 
+.about-content.revealed > :nth-child(5) { animation-delay: 0.5s; } 
+.about-content.revealed > :nth-child(6) { animation-delay: 0.6s; }

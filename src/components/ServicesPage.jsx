@@ -115,7 +115,7 @@ function ServicesPage() {
 					compliant IP support, strengthening patent and trademark filings, and
 					helping shape the future of innovation protection.
 				</p>
-				<button className="services-hero-btn">
+				<button className="services-hero-btn" onClick={() => (window.location.href = '/contact')}>
 					Get In Touch <span className="arrow">→</span>
 				</button>
 			</div>
@@ -138,7 +138,7 @@ function ServicesPage() {
 							Delivering IP Excellence for Over Two{' '}
 							<span className="italic">Decades</span>
 						</h2>
-						<button className="services-hero-btn stats-btn">
+						<button className="services-hero-btn stats-btn" onClick={() => (window.location.href = '/contact')}>
 							Get In Touch <span className="arrow">→</span>
 						</button>
 					</div>

@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 
 function AboutSection() {
 	const [startCount, setStartCount] = useState(false);
+	const [contentRevealed, setContentRevealed] = useState(false);
+	const [leftColRevealed, setLeftColRevealed] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -21,6 +23,38 @@ function AboutSection() {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, [startCount]);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const section = document.querySelector('.about-content');
+			if (!section) return;
+			const rect = section.getBoundingClientRect();
+			if (rect.top < window.innerHeight * 0.85 && !contentRevealed) {
+				setContentRevealed(true);
+			}
+		};
+
+		handleScroll();
+
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [contentRevealed]);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const section = document.querySelector('.about-left-column');
+			if (!section) return;
+			const rect = section.getBoundingClientRect();
+			if (rect.top < window.innerHeight * 0.85 && !leftColRevealed) {
+				setLeftColRevealed(true);
+			}
+		};
+
+		handleScroll();
+
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [leftColRevealed]);
 
 	useEffect(() => {
 		const container = document.querySelector('.about-image-row');
@@ -73,7 +107,7 @@ function AboutSection() {
 	return (
 		<section id="about" className="about-section">
 			<div className="about-container">
-				<div className="about-left-column">
+				<div className={`about-left-column ${leftColRevealed ? 'revealed' : ''}`}>
 					<div className="our-journey-header">
 						<div className="our-journey-arrow-container">
 							<span className="our-journey-arrow"></span>
@@ -84,7 +118,7 @@ function AboutSection() {
 					</div>
 				</div>
 				<div className="about-right-column">
-					<div className="about-content">
+					<div className={`about-content ${contentRevealed ? 'revealed' : ''}`}>
 						<h2 className="about-title">
 							At LexVu, we take the busywork off your plate so you can focus on winning the case and protecting what matters most.
 						</h2>

@@ -439,15 +439,16 @@
 		margin: 5rem 0 1.5rem 0;
 	}
 
-	.legal-services-cards-row {
+	.legal-services-cards-row,
+	.legal-services-cards-row.services-leadership-style {
 		grid-template-columns: 1fr;
 		column-gap: 0;
 		row-gap: 1.5rem;
-		padding: 0 2rem;
+		padding: 0 0.5rem;
 	}
 
 	.legal-service-card {
-		padding: 1.5rem;
+		padding: 1rem;
 		border-right: none !important;
 		border-bottom: 1px solid var(--color-link);
 		opacity: 1;
