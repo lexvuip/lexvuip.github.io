@@ -2,11 +2,13 @@ import React from 'react';
 import '../styles/AboutSection.css';
 import CountUp from 'react-countup';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function AboutSection() {
 	const [startCount, setStartCount] = useState(false);
 	const [contentRevealed, setContentRevealed] = useState(false);
 	const [leftColRevealed, setLeftColRevealed] = useState(false);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -137,7 +139,7 @@ function AboutSection() {
 						<div className="about-actions">
 							<button
 								className="about-contact-btn"
-								onClick={() => (window.location.href = '/contact')}
+								onClick={() => navigate('/contact')}
 							>
 								Get In Touch
 							</button>

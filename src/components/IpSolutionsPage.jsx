@@ -9,8 +9,10 @@ import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
 import CountUp from 'react-countup';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function IpSolutionsPage() {
+	const navigate = useNavigate();
 	const [startCount, setStartCount] = useState(false);
 
 	useEffect(() => {
@@ -134,7 +136,7 @@ function IpSolutionsPage() {
 				<p className="services-hero-description">
 					For over two decades, we've stood with clients through their most pivotal moments, providing trusted legal support, winning major cases, and shaping futures through law.
 				</p>
-				<button className="services-hero-btn" onClick={() => (window.location.href = '/contact')}>
+				<button className="services-hero-btn" onClick={() => navigate('/contact')}>
 					Get In Touch <span className="arrow">→</span>
 				</button>
 			</div>

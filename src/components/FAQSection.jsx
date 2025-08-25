@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/FAQSection.css';
+import { useNavigate } from 'react-router-dom';
 
 const faqs = [
 	{
@@ -43,6 +44,7 @@ const faqs = [
 function FAQSection() {
 	const [openIdx, setOpenIdx] = useState(null);
 	const contentRefs = useRef([]);
+	const navigate = useNavigate();
 
 	const handleToggle = (idx) => {
 		setOpenIdx((prev) => (prev === idx ? null : idx));
@@ -88,7 +90,7 @@ function FAQSection() {
 					</div>
 					<button
 						className="faq-contact-btn faq-animate-btn"
-						onClick={() => (window.location.href = '/contact')}
+						onClick={() => navigate('/contact')}
 					>
 						Get In Touch <span className="faq-arrow">→</span>
 					</button>

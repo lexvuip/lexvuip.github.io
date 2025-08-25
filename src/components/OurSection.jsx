@@ -5,6 +5,8 @@ import utilityPatentDrawingImage from '../assets/stockimages/utilitypatentdrawin
 import designPatentDrawingImage from '../assets/stockimages/desingpatentdrawing.jpg';
 import trademarkDesignImage from '../assets/stockimages/trademarkdesign.jpg';
 import customWorkflowImage from '../assets/stockimages/customworkflow.jpg';
+import { useNavigate } from 'react-router-dom';
+
 
 const services = [
 	{
@@ -47,6 +49,7 @@ const services = [
 
 function OurSection() {
 	const listRef = useRef(null);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const container = listRef.current;
@@ -176,8 +179,8 @@ function OurSection() {
 						</div>
 					))}
 				</div>
-				<div className="our-learnmore-row">
-					<button className="our-learnmore-btn" onClick={() => (window.location.href = '/services')}>Learn More</button>
+				<div className="our-learnmore-row" onClick={() => navigate('/services')}>
+					<button className="our-learnmore-btn" >Learn More</button>
 				</div>
 			</div>
 		</section>

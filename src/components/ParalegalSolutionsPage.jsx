@@ -12,8 +12,11 @@ import complianceSupport from '../assets/stockimages/complianceSupport.jpg';
 import ParalegalFAQSection from '../components/ParalegalSolutions/ParalegalFAQSection';
 import FotterSection from '../components/FotterSection';
 import TestimonialSection from './TestimonialSection';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function ParaLegalSolutions() {
+	const navigate = useNavigate();
 	const services = [
 		{
 			image: caseManagement,
@@ -156,7 +159,7 @@ function ParaLegalSolutions() {
 					pivotal moments, providing trusted legal counsel, winning major cases,
 					and shaping futures through law.
 				</p>
-				<button className="services-hero-btn" onClick={() => (window.location.href = '/contact')}>
+				<button className="services-hero-btn" onClick={() => navigate('/contact')}>
 					Get In Touch <span className="arrow">→</span>
 				</button>
 			</div>
@@ -182,7 +185,7 @@ function ParaLegalSolutions() {
 						<h2 className="services-stats-title">
 							We support attorneys strengthen cases with proven <span className="italic">experience, precision, and strategic</span> insight that sharpens their competitive edge
 						</h2>
-						<button className="services-hero-btn stats-btn">
+						<button className="services-hero-btn stats-btn" onClick={() => navigate('/contact')}>
 							Get In Touch <span className="arrow">→</span>
 						</button>
 					</div>
