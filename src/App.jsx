@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate, Link } from 'react-router-dom';
 import React, { useEffect } from 'react'; // <-- This is correct
 import AboutSection from './components/AboutSection';
 import OurSection from './components/OurSection';
@@ -69,15 +69,15 @@ function AppContent() {
 										>
 											Get In Touch
 										</button>
-										<a href="/services" className="hero-services-link">
+										<Link to="/services" className="hero-services-link">
 											Our Services
-										</a>
+										</Link>
 									</div>
 								</div>
 							</header>
 							<AboutSection />
 							<OurSection />
-							{/* <BlogSection /> */}
+							<BlogSection />
 							<TestimonialSection />
 							<FAQSection />
 							<FotterSection />

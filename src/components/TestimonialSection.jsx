@@ -33,52 +33,44 @@ const testimonials = [
 function TestimonialSection() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [animating, setAnimating] = useState(false);
-	const [direction, setDirection] = useState(''); // 'left' or 'right'
-	const [visibleCards, setVisibleCards] = useState([]);
-	const cardsToShow = 1; // Show only one card at a time
+	const [cards, setCards] = useState([]);
+
+    useEffect(() => {
+        setCards([{...testimonials[0], key: 0}]);
+    }, []);
+
 	const total = testimonials.length;
-
-	// Initialize visible cards
-	useEffect(() => {
-		updateVisibleCards(currentIndex);
-	}, [currentIndex]);
-
-	// Function to get the correct index with wrapping
-	const getWrappedIndex = (index) => {
-		return (index + total) % total;
-	};
-
-	// Update which cards are visible
-	const updateVisibleCards = (startIndex) => {
-		// For single card display, we'll include the current card
-		// and also track the previous and next cards for animation purposes
-		const currentCard = {
-			...testimonials[startIndex],
-			originalIndex: startIndex,
-			position: 'current'
-		};
-		
-		setVisibleCards([currentCard]);
-	};
-
-	const handlePrev = () => {
-		if (animating) return;
-		setDirection('left');
-		setAnimating(true);
-		setTimeout(() => {
-			setCurrentIndex(prev => getWrappedIndex(prev - 1));
-			setAnimating(false);
-		}, 500);
-	};
+	const getWrappedIndex = (index) => (index + total) % total;
 
 	const handleNext = () => {
 		if (animating) return;
-		setDirection('right');
 		setAnimating(true);
-		setTimeout(() => {
-			setCurrentIndex(prev => getWrappedIndex(prev + 1));
-			setAnimating(false);
-		}, 500);
+
+        const nextIndex = getWrappedIndex(currentIndex + 1);
+        const currentCard = {...testimonials[currentIndex], animation: 'slide-out-right', key: currentIndex};
+        const nextCard = {...testimonials[nextIndex], animation: 'slide-in-from-left', key: nextIndex};
+
+        setCards([currentCard, nextCard]);
+	};
+
+    const handlePrev = () => {
+        if (animating) return;
+        setAnimating(true);
+
+        const prevIndex = getWrappedIndex(currentIndex - 1);
+        const currentCard = {...testimonials[currentIndex], animation: 'slide-out-left', key: currentIndex};
+        const prevCard = {...testimonials[prevIndex], animation: 'slide-in-from-right', key: prevIndex};
+
+        setCards([currentCard, prevCard]);
+    }
+
+	const onAnimationEnd = (animationName) => {
+        if (animationName && animationName.includes('in')) {
+            const newIndex = cards.find(c => c.animation.includes('in')).key;
+            setCurrentIndex(newIndex);
+            setCards([{...testimonials[newIndex], key: newIndex}]);
+            setAnimating(false);
+        }
 	};
 
 	return (
@@ -86,21 +78,18 @@ function TestimonialSection() {
 			<div className="testimonial-container">
 				<h2 className="testimonial-heading">WHAT OUR CLIENTS SAY</h2>
 				<div className="testimonial-carousel-container">
-					<div
-						className={`testimonial-cards-row testimonial-slide-${
-							animating ? direction : 'none'
-						}`}
-					>
-						{visibleCards.map((testimonial, idx) => (
-							<div 
-								className="testimonial-card card-center"
-								key={`${testimonial.originalIndex}-${idx}`}
-							>
-								<h3>{testimonial.title}</h3>
-								<div className="testimonial-text">{testimonial.text}</div>
-								<div className="testimonial-name">— {testimonial.name}</div>
-							</div>
-						))}
+					<div className="testimonial-cards-row">
+                        {cards.map(card => (
+                            <div
+                                key={card.key}
+                                className={`testimonial-card card-center ${card.animation || ''}`}
+                                onAnimationEnd={() => onAnimationEnd(card.animation)}
+                            >
+                                <h3>{card.title}</h3>
+                                <div className="testimonial-text">{card.text}</div>
+                                <div className="testimonial-name">— {card.name}</div>
+                            </div>
+                        ))}
 					</div>
 				</div>
 				<div className="testimonial-nav-row">
@@ -112,7 +101,6 @@ function TestimonialSection() {
 					>
 						&#8592;
 					</button>
-
 					<button
 						className="testimonial-nav-btn"
 						onClick={handleNext}
