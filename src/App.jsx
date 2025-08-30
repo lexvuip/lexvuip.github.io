@@ -85,7 +85,7 @@ function AppContent() {
 					}
 				/>
 				<Route path="/contact" element={<ContactUs />} />
-				<Route path="/blog/:id" element={<BlogPost />} />
+				{/* <Route path="/blog/:id" element={<BlogPost />} /> */}
 				<Route path="/about" element={<AboutPage />} />
 				<Route path="/services" element={<ServicesPage />} />
 				<Route
