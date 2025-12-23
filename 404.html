@@ -2,11 +2,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>Page Redirect</title>
+		<title>Redirecting...</title>
 		<script type="text/javascript">
-			// Redirect to index.html while keeping the current path
-			const pathname = window.location.pathname;
-			window.location.href = window.location.origin + '/index.html' + pathname;
+			// Only redirect if we are not already on index.html
+			if (!window.location.pathname.includes('index.html')) {
+				const path = window.location.pathname;
+				const search = window.location.search;
+				const hash = window.location.hash;
+				window.location.replace('/index.html' + path + search + hash);
+			}
 		</script>
 	</head>
 	<body></body>
