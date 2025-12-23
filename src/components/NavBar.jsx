@@ -8,8 +8,10 @@ function NavBar() {
 	const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 	const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 	const [mobileIpSolutionsOpen, setMobileIpSolutionsOpen] = useState(false);
-	const [mobileParalegalSolutionsOpen, setMobileParalegalSolutionsOpen] = useState(false);
-	const [mobileCustomSolutionsOpen, setMobileCustomSolutionsOpen] = useState(false);
+	const [mobileParalegalSolutionsOpen, setMobileParalegalSolutionsOpen] =
+		useState(false);
+	const [mobileCustomSolutionsOpen, setMobileCustomSolutionsOpen] =
+		useState(false);
 	const servicesTimeout = useRef();
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -108,6 +110,7 @@ function NavBar() {
 				}`}
 			>
 				<Link to="/" className="navbar-logo">
+					<img src="/logo.png" alt="LexVuIP Logo" className="navbar-logo-img" />
 					LexVuIP
 				</Link>
 
@@ -206,31 +209,59 @@ function NavBar() {
 						</li>
 						<li className="mobile-services-item">
 							<div className="mobile-services-toggle">
-								<Link to="/services" onClick={closeMobileMenu} className="mobile-services-title">
+								<Link
+									to="/services"
+									onClick={closeMobileMenu}
+									className="mobile-services-title"
+								>
 									<span>Services</span>
 								</Link>
-								<button 
+								<button
 									className="mobile-arrow-btn"
 									onClick={toggleMobileServices}
 								>
-									<span className={`mobile-arrow ${mobileServicesOpen ? 'open' : ''}`}>▼</span>
+									<span
+										className={`mobile-arrow ${
+											mobileServicesOpen ? 'open' : ''
+										}`}
+									>
+										▼
+									</span>
 								</button>
 							</div>
-							<div className={`mobile-services-dropdown ${mobileServicesOpen ? 'open' : ''}`}>
+							<div
+								className={`mobile-services-dropdown ${
+									mobileServicesOpen ? 'open' : ''
+								}`}
+							>
 								{/* IP Solutions Nested Dropdown */}
 								<div className="mobile-services-section">
 									<div className="mobile-services-title-toggle">
-										<Link to="/service/ipsolutions" onClick={closeMobileMenu} className="mobile-services-section-title">
+										<Link
+											to="/service/ipsolutions"
+											onClick={closeMobileMenu}
+											className="mobile-services-section-title"
+										>
 											<span>IP Solutions</span>
 										</Link>
-										<button 
+										<button
 											className="mobile-sub-arrow-btn"
 											onClick={toggleMobileIpSolutions}
 										>
-											<span className={`mobile-sub-arrow ${mobileIpSolutionsOpen ? 'open' : ''}`}>▼</span>
+											<span
+												className={`mobile-sub-arrow ${
+													mobileIpSolutionsOpen ? 'open' : ''
+												}`}
+											>
+												▼
+											</span>
 										</button>
 									</div>
-									<div className={`mobile-services-sub-dropdown ${mobileIpSolutionsOpen ? 'open' : ''}`}>
+									<div
+										className={`mobile-services-sub-dropdown ${
+											mobileIpSolutionsOpen ? 'open' : ''
+										}`}
+									>
 										<ul className="mobile-services-list">
 											<li>Utility Patent Drawings</li>
 											<li>Design Patent Drawings</li>
@@ -242,17 +273,31 @@ function NavBar() {
 								{/* Paralegal Solutions Nested Dropdown */}
 								<div className="mobile-services-section">
 									<div className="mobile-services-title-toggle">
-										<Link to="/service/paralegalsolutions" onClick={closeMobileMenu} className="mobile-services-section-title">
+										<Link
+											to="/service/paralegalsolutions"
+											onClick={closeMobileMenu}
+											className="mobile-services-section-title"
+										>
 											<span>Paralegal Solutions</span>
 										</Link>
-										<button 
+										<button
 											className="mobile-sub-arrow-btn"
 											onClick={toggleMobileParalegalSolutions}
 										>
-											<span className={`mobile-sub-arrow ${mobileParalegalSolutionsOpen ? 'open' : ''}`}>▼</span>
+											<span
+												className={`mobile-sub-arrow ${
+													mobileParalegalSolutionsOpen ? 'open' : ''
+												}`}
+											>
+												▼
+											</span>
 										</button>
 									</div>
-									<div className={`mobile-services-sub-dropdown ${mobileParalegalSolutionsOpen ? 'open' : ''}`}>
+									<div
+										className={`mobile-services-sub-dropdown ${
+											mobileParalegalSolutionsOpen ? 'open' : ''
+										}`}
+									>
 										<ul className="mobile-services-list">
 											<li>Case Management</li>
 											<li>Docketing Management</li>
@@ -268,17 +313,31 @@ function NavBar() {
 								{/* Custom Solutions Nested Dropdown */}
 								<div className="mobile-services-section">
 									<div className="mobile-services-title-toggle">
-										<Link to="/service/customsolutions" onClick={closeMobileMenu} className="mobile-services-section-title">
+										<Link
+											to="/service/customsolutions"
+											onClick={closeMobileMenu}
+											className="mobile-services-section-title"
+										>
 											<span>Custom Solutions</span>
 										</Link>
-										<button 
+										<button
 											className="mobile-sub-arrow-btn"
 											onClick={toggleMobileCustomSolutions}
 										>
-											<span className={`mobile-sub-arrow ${mobileCustomSolutionsOpen ? 'open' : ''}`}>▼</span>
+											<span
+												className={`mobile-sub-arrow ${
+													mobileCustomSolutionsOpen ? 'open' : ''
+												}`}
+											>
+												▼
+											</span>
 										</button>
 									</div>
-									<div className={`mobile-services-sub-dropdown ${mobileCustomSolutionsOpen ? 'open' : ''}`}>
+									<div
+										className={`mobile-services-sub-dropdown ${
+											mobileCustomSolutionsOpen ? 'open' : ''
+										}`}
+									>
 										{/* Custom solutions content can be added here if needed */}
 									</div>
 								</div>

@@ -1,4 +1,10 @@
-import { Routes, Route, useLocation, useNavigate, Link } from 'react-router-dom';
+import {
+	Routes,
+	Route,
+	useLocation,
+	useNavigate,
+	Link,
+} from 'react-router-dom';
 import React, { useEffect } from 'react'; // <-- This is correct
 import AboutSection from './components/AboutSection';
 import OurSection from './components/OurSection';
@@ -45,8 +51,6 @@ function AppContent() {
 					element={
 						<>
 							<header className="hero-section">
-
-
 								<div className="hero-content">
 									<h1 className="hero-title">
 										{renderAnimatedWords(
@@ -60,7 +64,12 @@ function AppContent() {
 										)}
 									</h1>
 									<p className="hero-description">
-										Your cases deserve more than routine paperwork. They deserve strategy and accuracy. At LexVu, we take care of the details that protect your clients and free up your time. Our team is trained in filings, trial preparation, managing clients, docket management and patent support. We don’t just follow procedure; we raise the standard every time.
+										Your cases deserve more than routine paperwork. They deserve
+										strategy and accuracy. At LexVu, we take care of the details
+										that protect your clients and free up your time. Our team is
+										trained in filings, trial preparation, managing clients,
+										docket management and patent support. We don’t just follow
+										procedure; we raise the standard every time.
 									</p>
 									<div className="hero-actions">
 										<button
@@ -77,7 +86,7 @@ function AppContent() {
 							</header>
 							<AboutSection />
 							<OurSection />
-							<BlogSection />
+							{/* <BlogSection /> */}
 							<TestimonialSection />
 							<FAQSection />
 							<FotterSection />
