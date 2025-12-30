@@ -159,7 +159,10 @@ function ParaLegalSolutions() {
 					pivotal moments, providing trusted legal counsel, winning major cases,
 					and shaping futures through law.
 				</p>
-				<button className="services-hero-btn" onClick={() => navigate('/contact')}>
+				<button
+					className="services-hero-btn"
+					onClick={() => navigate('/contact')}
+				>
 					Get In Touch <span className="arrow">→</span>
 				</button>
 			</div>
@@ -183,24 +186,36 @@ function ParaLegalSolutions() {
 							<span className="italic">Decades</span>
 						</h2> */}
 						<h2 className="services-stats-title">
-							We support attorneys strengthen cases with proven <span className="italic">experience, precision, and strategic</span> insight that sharpens their competitive edge
+							We support attorneys strengthen cases with proven{' '}
+							<span className="italic">
+								experience, precision, and strategic
+							</span>{' '}
+							insight that sharpens their competitive edge
 						</h2>
-						<button className="services-hero-btn stats-btn" onClick={() => navigate('/contact')}>
+						<button
+							className="services-hero-btn stats-btn"
+							onClick={() => navigate('/contact')}
+						>
 							Get In Touch <span className="arrow">→</span>
 						</button>
 					</div>
 					<div className="services-stats-right">
 						<p>
-							We help attorneys win more cases by clearing the overload and keeping the details under control. Whatever your docket demands, we’re ready to keep you ahead of deadlines.
+							We help attorneys win more cases by clearing the overload and
+							keeping the details under control. Whatever your docket demands,
+							we’re ready to keep you ahead of deadlines.
 						</p>
 						<p>
-							With decades of hands-on paralegal support, we handle filings, prep, and documentation so you stay focused on arguments and strategy. What this really means is your time goes where it counts, building cases and serving clients.
+							With decades of hands-on paralegal support, we handle filings,
+							prep, and documentation so you stay focused on arguments and
+							strategy. What this really means is your time goes where it
+							counts, building cases and serving clients.
 						</p>
 					</div>
 				</div>
 
 				{/* New Legal Services Section */}
-				<section className="legal-services-section">
+				<section className="legal-services-section" id="paralegal-solutions">
 					<div className="legal-services-header">
 						<div className="legal-services-badge">OUR LEGAL SERVICES</div>
 						<h2 className="legal-services-title">

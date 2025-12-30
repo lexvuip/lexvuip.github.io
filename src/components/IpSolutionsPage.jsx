@@ -86,43 +86,46 @@ function IpSolutionsPage() {
 			image: utilityPatent,
 			title: 'Design',
 			subtitle: 'Patents',
-			headingOne: "Precision That Protects",
-			descOne: 'For design patents, every line and curve matters. We create drawings that highlight the unique visual qualities of your product while following USPTO and international standards closely.',
-			headingTwo: "Showcase Your Vision",
-			descTwo: "Our drawings do more than just document your design; they improve it. By making its distinct features clear, we help examiners recognize what sets your product apart.",
-			headingThree: "Tailored Service",
-			descThree: "No two designs are the same. That's why we adjust our approach to fit your specific needs, ensuring accuracy, originality, and protection for your intellectual property.",
-			bullets: [
-				'36,353+ Projects Completed Successfully'
-			],
+			headingOne: 'Precision That Protects',
+			descOne:
+				'For design patents, every line and curve matters. We create drawings that highlight the unique visual qualities of your product while following USPTO and international standards closely.',
+			headingTwo: 'Showcase Your Vision',
+			descTwo:
+				'Our drawings do more than just document your design; they improve it. By making its distinct features clear, we help examiners recognize what sets your product apart.',
+			headingThree: 'Tailored Service',
+			descThree:
+				"No two designs are the same. That's why we adjust our approach to fit your specific needs, ensuring accuracy, originality, and protection for your intellectual property.",
+			bullets: ['36,353+ Projects Completed Successfully'],
 		},
 		{
 			image: designPatent,
 			title: 'Utility',
 			subtitle: 'Patents',
-			headingOne: "Technical Expertise You Can Trust",
-			descOne: 'Our team combines deep engineering knowledge with careful attention to detail. We create utility patent drawings that clearly show every function and component of your invention.',
-			headingTwo: "Clarity That Drives Approval",
-			descTwo: "From reference numbers to arrowheads, every element is crafted to meet USPTO, PCT, and WIPO requirements. This helps examiners understand your invention quickly and boosts your application's chance of success.",
-			headingThree: "Collaborative Process",
-			descThree: "We work closely with you at every step. We ensure the drawings meet technical standards and reflect the true nature of your innovation.",
-			bullets: [
-				'78,765+ Projects Completed Successfully'
-			],
+			headingOne: 'Technical Expertise You Can Trust',
+			descOne:
+				'Our team combines deep engineering knowledge with careful attention to detail. We create utility patent drawings that clearly show every function and component of your invention.',
+			headingTwo: 'Clarity That Drives Approval',
+			descTwo:
+				"From reference numbers to arrowheads, every element is crafted to meet USPTO, PCT, and WIPO requirements. This helps examiners understand your invention quickly and boosts your application's chance of success.",
+			headingThree: 'Collaborative Process',
+			descThree:
+				'We work closely with you at every step. We ensure the drawings meet technical standards and reflect the true nature of your innovation.',
+			bullets: ['78,765+ Projects Completed Successfully'],
 		},
 		{
 			image: tradeMark,
 			title: 'Trademark',
 			subtitle: 'Support',
-			headingOne: "Your Brand, Defined Clearly",
-			descOne: 'We create trademark drawings that capture the essence of your identity while meeting the exact requirements for legal protection.',
-			headingTwo: "Visual Strength, Legal Power",
-			descTwo: "Our work boosts brand recognition and acts as a protective layer. It prevents unauthorized use and ensures consistency across all applications.",
-			headingThree: "Aligned With Your Vision",
-			descThree: "We collaborate with you to reflect your brand's voice. We ensure that your trademark is not only compliant but also connects with your audience.",
-			bullets: [
-				'6,059+ Projects Completed Successfully'
-			],
+			headingOne: 'Your Brand, Defined Clearly',
+			descOne:
+				'We create trademark drawings that capture the essence of your identity while meeting the exact requirements for legal protection.',
+			headingTwo: 'Visual Strength, Legal Power',
+			descTwo:
+				'Our work boosts brand recognition and acts as a protective layer. It prevents unauthorized use and ensures consistency across all applications.',
+			headingThree: 'Aligned With Your Vision',
+			descThree:
+				"We collaborate with you to reflect your brand's voice. We ensure that your trademark is not only compliant but also connects with your audience.",
+			bullets: ['6,059+ Projects Completed Successfully'],
 		},
 	];
 	return (
@@ -134,9 +137,14 @@ function IpSolutionsPage() {
 					Around Your <span className="italic">Needs</span>
 				</h1>
 				<p className="services-hero-description">
-					For over two decades, we've stood with clients through their most pivotal moments, providing trusted legal support, winning major cases, and shaping futures through law.
+					For over two decades, we've stood with clients through their most
+					pivotal moments, providing trusted legal support, winning major cases,
+					and shaping futures through law.
 				</p>
-				<button className="services-hero-btn" onClick={() => navigate('/contact')}>
+				<button
+					className="services-hero-btn"
+					onClick={() => navigate('/contact')}
+				>
 					Get In Touch <span className="arrow">→</span>
 				</button>
 			</div>
@@ -181,7 +189,9 @@ function IpSolutionsPage() {
 						<div className="about-stat-value">
 							{startCount && <CountUp end={98} duration={2.0} suffix="%" />}
 						</div>
-						<div className="about-stat-label">Client Satisfaction Worldwide</div>
+						<div className="about-stat-label">
+							Client Satisfaction Worldwide
+						</div>
 					</div>
 
 					<div
@@ -200,7 +210,7 @@ function IpSolutionsPage() {
 				</div>
 
 				{/* New Legal Services Section */}
-				<section className="legal-services-section">
+				<section className="legal-services-section" id="ipsolutions">
 					<div className="legal-services-header">
 						<div className="legal-services-badge">OUR LEGAL SERVICES</div>
 						<h2 className="legal-services-title">
@@ -222,11 +232,17 @@ function IpSolutionsPage() {
 										{service.subtitle}
 									</h3>
 									<h4>{service.headingOne}</h4>
-									<p className="separate-legal-service-desc">{service.descOne}</p>
+									<p className="separate-legal-service-desc">
+										{service.descOne}
+									</p>
 									<h4>{service.headingTwo}</h4>
-									<p className="separate-legal-service-desc">{service.descTwo}</p>
+									<p className="separate-legal-service-desc">
+										{service.descTwo}
+									</p>
 									<h4>{service.headingThree}</h4>
-									<p className="separate-legal-service-desc">{service.descThree}</p>
+									<p className="separate-legal-service-desc">
+										{service.descThree}
+									</p>
 									<ul className="separate-legal-service-list">
 										{service.bullets.map((b, i) => (
 											<li key={i}>{b}</li>

@@ -158,7 +158,7 @@
 }
 
 .services-dropdown-section ul li:hover {
-	color: var(--color-maroon);
+	color: var(--color-link);
 	cursor: pointer;
 }
 
@@ -557,12 +557,12 @@
 		padding: 12px 20px;
 		font-size: 1rem;
 	}
-	
+
 	.mobile-services-title {
 		padding: 10px 40px;
 		font-size: 0.9rem;
 	}
-	
+
 	.mobile-services-list li {
 		padding: 6px 60px;
 		font-size: 0.85rem;
@@ -574,11 +574,11 @@
 	.mobile-menu-btn {
 		display: block;
 	}
-	
+
 	.navbar-links {
 		display: none;
 	}
-	
+
 	.navbar-contact {
 		display: none;
 	}

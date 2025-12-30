@@ -8,17 +8,32 @@ function FotterSection() {
 				<div className="footer-main-row">
 					<div className="footer-col footer-brand">
 						<div className="footer-logo">
-							<img src="/logo.png" alt="LexVuIP Logo" className="footer-logo-img" />
+							<img
+								src="/logo.png"
+								alt="LexVuIP Logo"
+								className="footer-logo-img"
+							/>
 							<span>LexVuIP</span>
 						</div>
 						<div className="footer-tagline">
-							Precision in Every Filing<br />
+							Precision in Every Filing
+							<br />
 							Clarity in Every Design.
 						</div>
 						<div className="footer-social">
-							<a href="https://www.linkedin.com/in/lexvuip-global-ip-paralegal-solutions" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
-								<svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
-									<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+							<a
+								href="https://www.linkedin.com/in/lexvuip-global-ip-paralegal-solutions"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="social-link"
+								aria-label="LinkedIn"
+							>
+								<svg
+									className="social-icon"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+								>
+									<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
 								</svg>
 							</a>
 							{/* <a href="#" className="social-link" aria-label="Instagram">
@@ -33,42 +48,82 @@ function FotterSection() {
 						<div className="footer-links-group">
 							<h4 className="footer-links-title">Company</h4>
 							<ul className="footer-links-list">
-								<li><a href="/">Home</a></li>
-								<li><a href="/about">About</a></li>
-								<li><a href="/services">Services</a></li>
-								<li><a href="/faq">FAQ</a></li>
-								<li><a href="/contact">Contact</a></li>
+								<li>
+									<a href="/">Home</a>
+								</li>
+								<li>
+									<a href="/about">About</a>
+								</li>
+								<li>
+									<a href="/services">Services</a>
+								</li>
+								<li>
+									<a href="/#faq">FAQ</a>
+								</li>
+								<li>
+									<a href="/contact">Contact</a>
+								</li>
 							</ul>
 						</div>
 
 						<div className="footer-links-group">
 							<h4 className="footer-links-title">IP Solutions</h4>
 							<ul className="footer-links-list">
-								<li><a href="/service/ipsolutions">Utility Patent Drawings</a></li>
-								<li><a href="/service/ipsolutions">Design Patent Drawings</a></li>
-								<li><a href="/service/ipsolutions">Trademark Support</a></li>
+								<li>
+									<a href="/service/ipsolutions">Utility Patent Drawings</a>
+								</li>
+								<li>
+									<a href="/service/ipsolutions">Design Patent Drawings</a>
+								</li>
+								<li>
+									<a href="/service/ipsolutions">Trademark Support</a>
+								</li>
 							</ul>
 						</div>
 
 						<div className="footer-links-group">
 							<h4 className="footer-links-title">Paralegal Solutions</h4>
 							<ul className="footer-links-list">
-								<li><a href="/service/paralegalsolutions">Docketing Management</a></li>
-								<li><a href="/service/paralegalsolutions">E-Filing Services</a></li>
-								<li><a href="/service/paralegalsolutions-management">Contact Management</a></li>
-								<li><a href="/service/paralegalsolutions">Trial Preparation</a></li>
-								<li><a href="/service/paralegalsolutions">Deposition Coordination</a></li>
-								<li><a href="/service/paralegalsolutions">Compliance Support</a></li>
+								<li>
+									<a href="/service/paralegalsolutions">Docketing Management</a>
+								</li>
+								<li>
+									<a href="/service/paralegalsolutions">E-Filing Services</a>
+								</li>
+								<li>
+									<a href="/service/paralegalsolutions-management">
+										Contact Management
+									</a>
+								</li>
+								<li>
+									<a href="/service/paralegalsolutions">Trial Preparation</a>
+								</li>
+								<li>
+									<a href="/service/paralegalsolutions">
+										Deposition Coordination
+									</a>
+								</li>
+								<li>
+									<a href="/service/paralegalsolutions">Compliance Support</a>
+								</li>
 							</ul>
 						</div>
 
 						<div className="footer-links-group">
 							<h4 className="footer-links-title">Resources</h4>
 							<ul className="footer-links-list">
-								<li><a href="/#">Blog</a></li>
-								<li><a href="/#">Case Studies</a></li>
-								<li><a href="/#">Whitepapers</a></li>
-								<li><a href="/#">Webinars</a></li>
+								<li>
+									<a href="/#">Blog</a>
+								</li>
+								<li>
+									<a href="/#">Case Studies</a>
+								</li>
+								<li>
+									<a href="/#">Whitepapers</a>
+								</li>
+								<li>
+									<a href="/#">Webinars</a>
+								</li>
 							</ul>
 						</div>
 					</div>

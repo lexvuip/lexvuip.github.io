@@ -141,9 +141,15 @@ function NavBar() {
 										<Link to="/service/ipsolutions">IP Solutions</Link>
 									</div>
 									<ul>
-										<li>Utility Patent Drawings</li>
-										<li>Design Patent Drawings</li>
-										<li>Trademark Support</li>
+										<a href="/service/ipsolutions/#ipsolutions">
+											<li>Utility Patent Drawings</li>
+										</a>
+										<a href="/service/ipsolutions/#ipsolutions">
+											<li>Design Patent Drawings</li>
+										</a>
+										<a href="/service/ipsolutions/#ipsolutions">
+											<li>Trademark Support</li>
+										</a>
 									</ul>
 								</div>
 								<div className="services-dropdown-section">
@@ -153,13 +159,27 @@ function NavBar() {
 										</Link>
 									</div>
 									<ul>
-										<li>Case Management</li>
-										<li>Docketing Management</li>
-										<li>E-Filing Services</li>
-										<li>Contact Management Services</li>
-										<li>Trial Preparation</li>
-										<li>Deposition Coordination</li>
-										<li>Compliance Support</li>
+										<a href="/service/paralegalsolutions/#paralegal-solutions">
+											<li>Case Management</li>
+										</a>
+										<a href="/service/paralegalsolutions/#paralegal-solutions">
+											<li>Docketing Management</li>
+										</a>
+										<a href="/service/paralegalsolutions/#paralegal-solutions">
+											<li>E-Filing Services</li>
+										</a>
+										<a href="/service/paralegalsolutions/#paralegal-solutions">
+											<li>Contact Management Services</li>
+										</a>
+										<a href="/service/paralegalsolutions/#paralegal-solutions">
+											<li>Trial Preparation</li>
+										</a>
+										<a href="/service/paralegalsolutions/#paralegal-solutions">
+											<li>Deposition Coordination</li>
+										</a>
+										<a href="/service/paralegalsolutions/#paralegal-solutions">
+											<li>Compliance Support</li>
+										</a>
 									</ul>
 								</div>
 								<div className="services-dropdown-section">
