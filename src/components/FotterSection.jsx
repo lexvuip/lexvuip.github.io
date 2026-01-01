@@ -52,7 +52,7 @@ function FotterSection() {
 								</svg>
 							</a>
 							<a
-								href="https://www.instagram.com/lexvuip"
+								href="https://www.instagram.com/lexvu_lexvuip?igsh=MXNpMnYxbWI4cWZ3NQ=="
 								target="_blank"
 								rel="noopener noreferrer"
 								className="social-link"
