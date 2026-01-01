@@ -37,7 +37,7 @@ function FotterSection() {
 								</svg>
 							</a>
 							<a
-								href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61585607920392"
+								href="https://www.facebook.com/share/1G3j5Jxpet/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="social-link"
