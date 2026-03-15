@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/AboutPage.css';
 import lawyerImage from '../assets/stockimages/lawer.jpg';
 import ourMission from '../assets/stockimages/ourmission.jpg'
