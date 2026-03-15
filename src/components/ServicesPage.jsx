@@ -19,6 +19,16 @@ import { useNavigate } from 'react-router-dom';
 
 function ServicesPage() {
 	const navigate = useNavigate();
+	useEffect(() => {
+		document.title = 'Legal & IP Services - LexVu | Comprehensive Support';
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				'content',
+				'Explore LexVu’s full range of legal support services, including Paralegal Solutions, IP Solutions, and custom workflow automation for attorneys.'
+			);
+		}
+	}, []);
 	const services = [
 		{
 			image: lawyerImage,

@@ -30,6 +30,20 @@ function AppContent() {
 	// const location = useLocation();
 	// const isContactPage = location.pathname === '/contact';
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	useEffect(() => {
+		if (location.pathname === '/') {
+			document.title = 'LexVu - Precision in Every Filing, Clarity in Every Design';
+			const metaDescription = document.querySelector('meta[name="description"]');
+			if (metaDescription) {
+				metaDescription.setAttribute(
+					'content',
+					'LexVu provides expert paralegal, IP, and custom legal solutions. We handle filings, trial prep, docketing, and patent support with precision and strategy.'
+				);
+			}
+		}
+	}, [location]);
 
 	const renderAnimatedWords = (words, startDelay = 0) => {
 		return words.map((word, index) => (

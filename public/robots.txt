@@ -1,0 +1,9 @@
+# Allow all crawlers and AI "claws"
+User-agent: *
+Allow: /
+
+# Optional: Specific AI User-agents (GPTBot, CCBot, etc.) are allowed by the * above.
+# If you ever want to block specific ones, you can list them here.
+
+# Sitemaps help search engines find your pages faster
+Sitemap: https://lexvuip.github.io/sitemap.xml
