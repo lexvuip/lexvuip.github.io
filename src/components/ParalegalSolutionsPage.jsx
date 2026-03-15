@@ -17,6 +17,16 @@ import { useNavigate } from 'react-router-dom';
 
 function ParaLegalSolutions() {
 	const navigate = useNavigate();
+	useEffect(() => {
+		document.title = 'Paralegal Solutions - LexVu | Case & Docket Management';
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				'content',
+				'Expert paralegal services including case management, e-filing, trial prep, and docketing to help attorneys focus on litigation.'
+			);
+		}
+	}, []);
 	const services = [
 		{
 			image: caseManagement,

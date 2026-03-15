@@ -5,6 +5,16 @@ import FooterSection from '../components/FotterSection';
 
 function ContactUs() {
 	useEffect(() => {
+		document.title = 'Contact Us - LexVu | Talk to Our Experts';
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				'content',
+				'Get in touch with LexVu for expert legal support. Reach out for inquiries about paralegal services, IP solutions, and custom firm workflows.'
+			);
+		}
+	}, []);
+	useEffect(() => {
 		// Load HubSpot form script
 		const script = document.createElement('script');
 		script.src = 'https://js-na2.hsforms.net/forms/embed/243609401.js';

@@ -87,7 +87,7 @@ function ParalegalFAQSection() {
 					</button>
 					{/* <div className="faq-avatars">
 						{avatars.map((src, idx) => (
-							<img className="faq-avatar" src={src} alt="avatar" key={idx} />
+							<img className="faq-avatar" src={src} alt="" key={idx} />
 						))}
 					</div> */}
 				</div>

@@ -7,6 +7,16 @@ import TestimonialSection from './TestimonialSection';
 import FAQSection from './FAQSection';
 
 function CustomSolutionsPage() {
+	useEffect(() => {
+		document.title = 'Custom Solutions - LexVu | Tailored Legal Support';
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				'content',
+				'Tailored legal and IP support for your firm. We integrate into your workflow with custom automation and special project consulting.'
+			);
+		}
+	}, []);
 	// Add parallax effect for hero image
 	useEffect(() => {
 		const container = document.querySelector('.services-hero-image-row');

@@ -16,6 +16,17 @@ function IpSolutionsPage() {
 	const [startCount, setStartCount] = useState(false);
 
 	useEffect(() => {
+		document.title = 'IP Solutions - LexVu | Patent & Trademark Drawings';
+		const metaDescription = document.querySelector('meta[name="description"]');
+		if (metaDescription) {
+			metaDescription.setAttribute(
+				'content',
+				'Professional IP solutions including utility and design patent drawings, and trademark support. Trusted by attorneys for over 25 years.'
+			);
+		}
+	}, []);
+
+	useEffect(() => {
 		const handleScroll = () => {
 			const section = document.querySelector('.about-stats-row');
 			const rect = section?.getBoundingClientRect();
