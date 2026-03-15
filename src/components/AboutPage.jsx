@@ -10,6 +10,13 @@ import FotterSection from './FotterSection';
 import { useNavigate } from 'react-router-dom';
 
 function AboutPage() {
+    useEffect(() => {
+        document.title = "About Us - LexVu | Our Journey & Mission";
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute("content", "Learn about LexVu's 25-year journey from patent illustration to a full-service legal support partner for attorneys worldwide.");
+        }
+    }, []);
 
     let navigate = useNavigate();
     return (
@@ -33,7 +40,7 @@ function AboutPage() {
       
       <div class="card">
         <div class="icon-circle">
-          <img src={ourMission} alt="Mission Icon"/>
+          <img src={ourMission} alt="Our Mission: Supporting attorneys with reliable help"/>
         </div>
         <h3>Our Mission</h3>
         <p>We aim to <b>support</b> attorneys with <b>reliable</b>, detail-oriented <b>help</b> in both intellectual property and litigation. <b>We</b> ensure every filing, drawing, and deadline is managed with <b>care</b>.</p>
@@ -41,7 +48,7 @@ function AboutPage() {
 
       <div class="card">
         <div class="icon-circle">
-          <img src={ourPromise} alt="Promise Icon" />
+          <img src={ourPromise} alt="Our Promise: Delivering accurate and on-time results" />
         </div>
         <h3>Our Promise</h3>
         <p>We <b>relieve the pressure</b> on your desk. Whether you need design patent figures or trial prep documents, our work is <b>accurate</b>, <b>compliant</b>, and <b>delivered on time every time</b> .</p>
@@ -49,7 +56,7 @@ function AboutPage() {
 
       <div class="card">
         <div class="icon-circle">
-          <img src={ourPurpose} alt="Purpose Icon" />
+          <img src={ourPurpose} alt="Our Purpose: Strengthening attorney work and building trust" />
         </div>
         <h3>Our Purpose</h3>
         <p>To <b>strengthen</b> the work of attorneys by removing <b>bottlenecks</b>, protecting innovation, and building lasting <b>partnerships</b> rooted in <b>trust</b>, <b>clarity</b>, and <b>results</b>.</p>
