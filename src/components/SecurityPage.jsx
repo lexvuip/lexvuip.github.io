@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';
 
 function SecurityPage() {
 	useEffect(() => {
-		document.title = 'Data Confidentiality & Security | LexVuIP';
+		document.title = 'Information Security & Data Privacy Protocols | LexVuIP';
 
 		const metaDescription = document.querySelector('meta[name="description"]');
 		if (metaDescription) {
 			metaDescription.setAttribute(
 				'content',
-				'LexVuIP ensures complete data security and confidentiality with world-class infrastructure, restricted access, NDAs, encrypted communications, and data destruction policies.'
+				'LexVuIP employs rigorous data protection standards, including advanced encryption, restricted access controls, and strict confidentiality agreements to safeguard your intellectual property.'
 			);
 		}
 
@@ -19,20 +19,20 @@ function SecurityPage() {
 		if (metaKeywords) {
 			metaKeywords.setAttribute(
 				'content',
-				'data security, confidentiality, NDA, data protection, information security, legal document security, patent drawing security, encrypted communication, data destruction, biometric access'
+				'IP security, data privacy, legal confidentiality, encrypted data transfer, secure patent filing, information hardening, non-disclosure compliance, secure document handling, biometric security'
 			);
 		}
 
 		const ogTitle = document.querySelector('meta[property="og:title"]');
 		if (ogTitle) {
-			ogTitle.setAttribute('content', 'Data Confidentiality & Security | LexVuIP');
+			ogTitle.setAttribute('content', 'Information Security & Data Privacy Protocols | LexVuIP');
 		}
 
 		const ogDescription = document.querySelector('meta[property="og:description"]');
 		if (ogDescription) {
 			ogDescription.setAttribute(
 				'content',
-				'LexVuIP ensures complete data security and confidentiality with world-class infrastructure, restricted access, NDAs, and encrypted communications for all your legal support needs.'
+				'Discover how LexVuIP protects your sensitive legal data through multi-layered security infrastructure and stringent privacy policies.'
 			);
 		}
 
@@ -59,24 +59,24 @@ function SecurityPage() {
 		<div className="security-page">
 			<section className="security-hero-section">
 				<div className="security-hero-content">
-					<div className="security-badge">Data Confidentiality and Security</div>
+					<div className="security-badge">Security & Privacy First</div>
 					<h1 className="security-hero-title">
-						Confidentiality and Integrity are our{' '}
-						<span className="security-emphasis">Core Values</span>
+						Protecting Your Intellectual Property with{' '}
+						<span className="security-emphasis">Uncompromising Standards</span>
 					</h1>
 					<p className="security-hero-description">
-						Confidentiality and Integrity are our Core Values and we understand
-						the importance of data confidentiality and security. With these
-						objectives we have integrated multiple strategies and world class
-						infrastructure to ensure complete security and compliance. A snapshot
-						of the data security measures has been provided below, for details
-						regarding those please feel free to contact us.
+						At LexVuIP, we recognize that your data is your most valuable asset.
+						Our security framework is built on a foundation of trust,
+						transparency, and multi-layered defense. We have implemented a
+						comprehensive suite of technical and organizational measures to
+						ensure that every document, drawing, and communication remains
+						completely confidential and secure throughout its lifecycle.
 					</p>
 					<button
 						className="security-hero-btn"
 						onClick={() => navigate('/contact')}
 					>
-						Contact Us for Details
+						Learn More About Our Safety Measures
 					</button>
 				</div>
 			</section>
@@ -96,16 +96,18 @@ function SecurityPage() {
 								<path d="M7 11V7a5 5 0 0 1 10 0v4" />
 							</svg>
 						</div>
-						<h2>SYSTEM LEVEL SECURITY</h2>
+						<h2>INFRASTRUCTURE HARDENING</h2>
 						<p>
-							Password protected logins allow access to designated users only and
-							access to the data of other teams on the server is restricted
+							Our operational environment is fortified against unauthorized
+							entry. We utilize segmented networks and strict identity
+							management to ensure that sensitive data is only accessible to
+							authorized personnel.
 						</p>
 						<ul>
-							<li>Restricted &amp; Monitored Access</li>
-							<li>Disabled Ports for Removable Media</li>
+							<li>24/7 Monitored Access Control</li>
+							<li>Hardware Port Lockdown for Removable Media</li>
 							<li>
-								Biometric access system for controlled and monitored access
+								Multi-factor Biometric Authentication for Secure Zones
 							</li>
 						</ul>
 					</article>
@@ -126,19 +128,18 @@ function SecurityPage() {
 								<polyline points="10 9 9 9 8 9" />
 							</svg>
 						</div>
-						<h2>LEGAL LEVEL SECURITY</h2>
+						<h2>ETHICAL & CONTRACTUAL OBLIGATIONS</h2>
 						<p>
-							We represent and warrant that the terms of the Non-disclosure and
-							confidentiality agreement shall extend and apply to the services
-							provided to the client. We will ensure that the team(s) shall at
-							all times comply with all policies and codes of conduct imposed by
-							the client through
+							Confidentiality is a legal mandate at LexVuIP. Every member of
+							our team is bound by rigorous non-disclosure agreements that
+							align with the highest industry standards for legal and patent
+							support.
 						</p>
 						<ul>
-							<li>Non-disclosure Agreements</li>
-							<li>Confidentiality Agreements</li>
+							<li>Comprehensive Non-Disclosure Agreements (NDA)</li>
+							<li>Binding Confidentiality Clauses in all Contracts</li>
 							<li>
-								Regular sessions for all employees on data security sensitization
+								Continuous Security Awareness and Ethical Conduct Training
 							</li>
 						</ul>
 					</article>
@@ -156,16 +157,17 @@ function SecurityPage() {
 								<polyline points="22,6 12,13 2,6" />
 							</svg>
 						</div>
-						<h2>COMMUNICATION LEVEL SECURITY</h2>
+						<h2>SECURE COMMUNICATION CHANNELS</h2>
 						<p>
-							Use of encryption tools such as PGP, GPG, etc., for all
-							deliverables and communication
+							We protect information in transit using industry-standard
+							encryption protocols. Our digital workflows are designed to
+							prevent data leakage and ensure end-to-end integrity.
 						</p>
 						<ul>
-							<li>Encrypted Mails</li>
-							<li>No access to web-based mail</li>
+							<li>End-to-End Encrypted Data Transmission</li>
+							<li>Restricted External Web and Email Access</li>
 							<li>
-								Data upload websites like blogs and web data servers are blocked
+								Proactive Blocking of Unauthorized File-Sharing Platforms
 							</li>
 						</ul>
 					</article>
@@ -185,18 +187,18 @@ function SecurityPage() {
 								<line x1="14" y1="11" x2="14" y2="17" />
 							</svg>
 						</div>
-						<h2>DATA DESTRUCTION POLICY</h2>
+						<h2>DATA LIFECYCLE MANAGEMENT</h2>
 						<p>
-							A dedicated group is allocated the task of physical shredding
-							printed documents and deleting digital data on a periodic basis
+							Our commitment to privacy extends to the disposal of information.
+							We follow strict protocols for the permanent destruction of both
+							physical and digital assets once they are no longer required.
 						</p>
 						<ul>
-							<li>Shredding of Printed documents</li>
+							<li>Certified Secure Shredding of Physical Documents</li>
 							<li>
-								Digital deletion certificate issued to clients after project
-								completion
+								Verifiable Digital Data Sanitization Post-Project
 							</li>
-							<li>Willingness to work through client dedicated servers</li>
+							<li>Support for Direct Collaboration via Client-Hosted Servers</li>
 						</ul>
 					</article>
 				</div>
@@ -204,10 +206,10 @@ function SecurityPage() {
 
 			<section className="security-cta-section" aria-label="Contact for security details">
 				<div className="security-cta-content">
-					<h2>Have Questions About Our Security Measures?</h2>
+					<h2>Discuss Our Compliance Standards</h2>
 					<p>
-						We take data security seriously. Contact us to learn more about how
-						we protect your confidential information.
+						Need more specific details about our security protocols? Our team is
+						available to provide deeper insights into how we protect your information.
 					</p>
 					<button
 						className="security-cta-btn"
