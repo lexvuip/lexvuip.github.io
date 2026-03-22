@@ -22,6 +22,7 @@ import './styles/App.css';
 import ParaLegalSolutions from './components/ParalegalSolutionsPage';
 import IpSolutionsPage from './components/IpSolutionsPage';
 import CustomSolutionsPage from './components/CustomSolutionsPage';
+import SecurityPage from './components/SecurityPage';
 
 // Add this import at the top
 import FloatingCallButton from './components/FloatingCallButton';
@@ -120,6 +121,7 @@ function AppContent() {
 					path="/service/customsolutions"
 					element={<CustomSolutionsPage />}
 				/>
+				<Route path="/security" element={<SecurityPage />} />
 			</Routes>
 		</div>
 	);

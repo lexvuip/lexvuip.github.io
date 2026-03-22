@@ -82,12 +82,15 @@ function FotterSection() {
 								<li>
 									<a href="/services">Services</a>
 								</li>
-								<li>
-									<a href="/#faq">FAQ</a>
-								</li>
-								<li>
-									<a href="/contact">Contact</a>
-								</li>
+							<li>
+								<a href="/#faq">FAQ</a>
+							</li>
+							<li>
+								<a href="/security">Security</a>
+							</li>
+							<li>
+								<a href="/contact">Contact</a>
+							</li>
 							</ul>
 						</div>
 

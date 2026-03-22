@@ -194,6 +194,9 @@ function NavBar() {
 						<a href="/#faq">FAQ</a>
 					</li>
 					<li>
+						<Link to="/security">Security</Link>
+					</li>
+					<li>
 						<Link to="/contact">Contact Us</Link>
 					</li>
 				</ul>
@@ -367,6 +370,11 @@ function NavBar() {
 							<a href="/#faq" onClick={closeMobileMenu}>
 								FAQ
 							</a>
+						</li>
+						<li>
+							<Link to="/security" onClick={closeMobileMenu}>
+								Security
+							</Link>
 						</li>
 						<li>
 							<Link to="/contact" onClick={closeMobileMenu}>
