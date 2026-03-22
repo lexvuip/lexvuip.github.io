@@ -3,7 +3,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://lexvuip.github.io/</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,19 +11,19 @@
   <!-- Main Pages -->
   <url>
     <loc>https://lexvuip.github.io/about</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lexvuip.github.io/services</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lexvuip.github.io/contact</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -31,20 +31,28 @@
   <!-- Service Specific Pages -->
   <url>
     <loc>https://lexvuip.github.io/service/paralegalsolutions</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lexvuip.github.io/service/ipsolutions</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lexvuip.github.io/service/customsolutions</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- Security Page -->
+  <url>
+    <loc>https://lexvuip.github.io/security</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
